@@ -5,20 +5,29 @@ PODS:
   - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
-  - Macaw (= 0.9.7)
+  - Macaw (from `https://github.com/magauran/Macaw.git`, branch `master`)
   - TinyConstraints (= 4.0.1)
 
 SPEC REPOS:
   trunk:
-    - Macaw
     - SWXMLHash
     - TinyConstraints
+
+EXTERNAL SOURCES:
+  Macaw:
+    :branch: master
+    :git: https://github.com/magauran/Macaw.git
+
+CHECKOUT OPTIONS:
+  Macaw:
+    :commit: a747d15d6ecd09801bca8579c5b3770b9542acd0
+    :git: https://github.com/magauran/Macaw.git
 
 SPEC CHECKSUMS:
   Macaw: 4a931baf9a9826b06d0d8ecf300014c962ab9d50
   SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 704a900f647bf39669f002b330fd1208970bcbba
+PODFILE CHECKSUM: 365eaa3813bf2430c8a6c9b0edc90e535b8b782d
 
 COCOAPODS: 1.10.0

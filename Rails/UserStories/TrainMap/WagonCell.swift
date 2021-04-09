@@ -9,6 +9,11 @@ import UIKit
 import Macaw
 
 final class WagonCell: UICollectionViewCell {
+    struct Actions {
+        var didTap: ((CGPoint) -> Void)?
+    }
+
+    var actions = Actions()
     private let view: WagonView
 
     override init(frame: CGRect) {
@@ -17,19 +22,24 @@ final class WagonCell: UICollectionViewCell {
         self.contentView.addSubview(self.view)
 
 
-        self.view.node.nodeBy(tag: "tag1")?.onTouchPressed({ event in
+        self.view.node.nodeBy(tag: "tag1")?.onTouchPressed { event in
             let shape = event.node as! Shape
             shape.fill = Color.yellow
-        })
+        }
 
-        self.view.node.nodeBy(tag: "tag1")?.onTouchReleased({ event in
-            let shape = event.node as! Shape
+        self.view.node.nodeBy(tag: "tag1")?.onTouchReleased { [weak self] event in
+            guard let self = self,
+                  let shape = event.node as? Shape,
+                  let touchPoint = event.points.first
+            else { return }
             shape.fill = MacawPalette.someColor
-            print("tap node with tag1")
-        })
 
-        self.view.node.onLongTap { event in
+            let point = touchPoint.location(in: .scene).toCG()
 
+            if !event.isCancelled {
+                self.actions.didTap?(point)
+                print("tap")
+            }
         }
     }
 

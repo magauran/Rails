@@ -4,7 +4,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'Rails' do
-  pod "Macaw", "0.9.7"
+  pod "Macaw", :git => 'https://github.com/magauran/Macaw.git', :branch => 'master'
   pod "TinyConstraints", "4.0.1"
 end
 
