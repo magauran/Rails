@@ -5,6 +5,7 @@ inhibit_all_warnings!
 
 target 'Rails' do
   pod "Macaw", "0.9.7"
+  pod "TinyConstraints", "4.0.1"
 end
 
 post_install do |installer|
