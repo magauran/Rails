@@ -24,7 +24,7 @@ final class WagonCell: UICollectionViewCell {
 
         self.view.node.nodeBy(tag: "tag1")?.onTouchReleased({ event in
             let shape = event.node as! Shape
-            shape.fill = Color.gray
+            shape.fill = MacawPalette.someColor
             print("tap node with tag1")
         })
 
