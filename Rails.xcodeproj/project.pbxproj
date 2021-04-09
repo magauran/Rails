@@ -81,6 +81,59 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		887730562620C6B1001B5E25 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		887730572620C6D7001B5E25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8877304A26209CF7001B5E25 /* SVG */,
+				888A0F6726207BAB00F16A48 /* Assets.xcassets */,
+				888A0F6926207BAB00F16A48 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		887730582620C710001B5E25 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				888A0F6026207BA900F16A48 /* SceneDelegate.swift */,
+				888A0F5E26207BA900F16A48 /* AppDelegate.swift */,
+				888A0F6C26207BAB00F16A48 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8877305A2620C756001B5E25 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				8877305B2620C75D001B5E25 /* TrainMap */,
+				8877305C2620C763001B5E25 /* StationMap */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		8877305B2620C75D001B5E25 /* TrainMap */ = {
+			isa = PBXGroup;
+			children = (
+				887730522620B95A001B5E25 /* WagonCell.swift */,
+				887730542620B97B001B5E25 /* WagonView.swift */,
+				8877304D2620B828001B5E25 /* TrainMapViewController.swift */,
+			);
+			path = TrainMap;
+			sourceTree = "<group>";
+		};
+		8877305C2620C763001B5E25 /* StationMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StationMap;
+			sourceTree = "<group>";
+		};
 		888A0F5226207BA900F16A48 = {
 			isa = PBXGroup;
 			children = (
@@ -102,16 +155,11 @@
 		888A0F5D26207BA900F16A48 /* Rails */ = {
 			isa = PBXGroup;
 			children = (
-				888A0F5E26207BA900F16A48 /* AppDelegate.swift */,
-				888A0F6026207BA900F16A48 /* SceneDelegate.swift */,
+				887730572620C6D7001B5E25 /* Resources */,
+				887730582620C710001B5E25 /* App */,
+				887730562620C6B1001B5E25 /* DesignSystem */,
 				8877304F2620B91C001B5E25 /* Extensions */,
-				8877304A26209CF7001B5E25 /* SVG */,
-				8877304D2620B828001B5E25 /* TrainMapViewController.swift */,
-				887730522620B95A001B5E25 /* WagonCell.swift */,
-				887730542620B97B001B5E25 /* WagonView.swift */,
-				888A0F6726207BAB00F16A48 /* Assets.xcassets */,
-				888A0F6926207BAB00F16A48 /* LaunchScreen.storyboard */,
-				888A0F6C26207BAB00F16A48 /* Info.plist */,
+				8877305A2620C756001B5E25 /* UserStories */,
 			);
 			path = Rails;
 			sourceTree = "<group>";
@@ -377,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLQY2SH5YN;
-				INFOPLIST_FILE = Rails/Info.plist;
+				INFOPLIST_FILE = Rails/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GLQY2SH5YN;
-				INFOPLIST_FILE = Rails/Info.plist;
+				INFOPLIST_FILE = Rails/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
