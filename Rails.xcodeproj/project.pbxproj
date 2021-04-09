@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12AF346CAF823A23AEDBB83C /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */; };
+		8877304C26209D06001B5E25 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8877304B26209D06001B5E25 /* wagon.svg */; };
 		888A0F5F26207BA900F16A48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0F5E26207BA900F16A48 /* AppDelegate.swift */; };
 		888A0F6126207BA900F16A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0F6026207BA900F16A48 /* SceneDelegate.swift */; };
 		888A0F6326207BA900F16A48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0F6226207BA900F16A48 /* ViewController.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8877304B26209D06001B5E25 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
 		888A0F5B26207BA900F16A48 /* Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888A0F5E26207BA900F16A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888A0F6026207BA900F16A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		888A0F6726207BAB00F16A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		888A0F6A26207BAB00F16A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888A0F6C26207BAB00F16A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95FEA99E54D27846D2FD4960 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
+		C75F40D40CF00B9FC7F6A51C /* Pods-Rails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.debug.xcconfig"; path = "Target Support Files/Pods-Rails/Pods-Rails.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12AF346CAF823A23AEDBB83C /* Pods_Rails.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E9F41335B94387AA8F1F30B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C75F40D40CF00B9FC7F6A51C /* Pods-Rails.debug.xcconfig */,
+				95FEA99E54D27846D2FD4960 /* Pods-Rails.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3F32632D91A4F5CF494C464B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8877304A26209CF7001B5E25 /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				8877304B26209D06001B5E25 /* wagon.svg */,
+			);
+			path = SVG;
+			sourceTree = "<group>";
+		};
 		888A0F5226207BA900F16A48 = {
 			isa = PBXGroup;
 			children = (
 				888A0F5D26207BA900F16A48 /* Rails */,
 				888A0F5C26207BA900F16A48 /* Products */,
+				1E9F41335B94387AA8F1F30B /* Pods */,
+				3F32632D91A4F5CF494C464B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +90,7 @@
 			children = (
 				888A0F5E26207BA900F16A48 /* AppDelegate.swift */,
 				888A0F6026207BA900F16A48 /* SceneDelegate.swift */,
+				8877304A26209CF7001B5E25 /* SVG */,
 				888A0F6226207BA900F16A48 /* ViewController.swift */,
 				888A0F6726207BAB00F16A48 /* Assets.xcassets */,
 				888A0F6926207BAB00F16A48 /* LaunchScreen.storyboard */,
@@ -71,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 888A0F6F26207BAB00F16A48 /* Build configuration list for PBXNativeTarget "Rails" */;
 			buildPhases = (
+				D0C22192FFD966FE86807127 /* [CP] Check Pods Manifest.lock */,
 				888A0F5726207BA900F16A48 /* Sources */,
 				888A0F5826207BA900F16A48 /* Frameworks */,
 				888A0F5926207BA900F16A48 /* Resources */,
+				84E4AEB940C4C137F6D6DD69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,10 +160,53 @@
 			files = (
 				888A0F6B26207BAB00F16A48 /* LaunchScreen.storyboard in Resources */,
 				888A0F6826207BAB00F16A48 /* Assets.xcassets in Resources */,
+				8877304C26209D06001B5E25 /* wagon.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84E4AEB940C4C137F6D6DD69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rails/Pods-Rails-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rails/Pods-Rails-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rails/Pods-Rails-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0C22192FFD966FE86807127 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rails-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		888A0F5726207BA900F16A48 /* Sources */ = {
@@ -204,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -259,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -271,6 +351,7 @@
 		};
 		888A0F7026207BAB00F16A48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75F40D40CF00B9FC7F6A51C /* Pods-Rails.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +371,7 @@
 		};
 		888A0F7126207BAB00F16A48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95FEA99E54D27846D2FD4960 /* Pods-Rails.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
