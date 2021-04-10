@@ -14,6 +14,10 @@
 		8861ED2B2621D8260059FE81 /* ContainerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */; };
 		8861ED2E2621DF2C0059FE81 /* DateTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2D2621DF2C0059FE81 /* DateTimeView.swift */; };
 		8861ED302621DFC30059FE81 /* TimePeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2F2621DFC30059FE81 /* TimePeriodView.swift */; };
+		8861ED322621E6BE0059FE81 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED312621E6BE0059FE81 /* GreetingView.swift */; };
+		8861ED342621EF980059FE81 /* SearchForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED332621EF980059FE81 /* SearchForm.swift */; };
+		8861ED372621FDA70059FE81 /* VerticalAlignmentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */; };
+		8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED38262200230059FE81 /* ForwardDateView.swift */; };
 		8877304C26209D06001B5E25 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8877304B26209D06001B5E25 /* wagon.svg */; };
 		8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877304D2620B828001B5E25 /* TrainMapViewController.swift */; };
 		887730512620B926001B5E25 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730502620B926001B5E25 /* UICollectionView++.swift */; };
@@ -66,6 +70,10 @@
 		8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerWrapper.swift; sourceTree = "<group>"; };
 		8861ED2D2621DF2C0059FE81 /* DateTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeView.swift; sourceTree = "<group>"; };
 		8861ED2F2621DFC30059FE81 /* TimePeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriodView.swift; sourceTree = "<group>"; };
+		8861ED312621E6BE0059FE81 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
+		8861ED332621EF980059FE81 /* SearchForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForm.swift; sourceTree = "<group>"; };
+		8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignmentLabel.swift; sourceTree = "<group>"; };
+		8861ED38262200230059FE81 /* ForwardDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardDateView.swift; sourceTree = "<group>"; };
 		8877304B26209D06001B5E25 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
 		8877304D2620B828001B5E25 /* TrainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMapViewController.swift; sourceTree = "<group>"; };
 		887730502620B926001B5E25 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 			children = (
 				5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */,
 				8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */,
+				88A417232621D79C00718953 /* StringStyle.swift */,
 				5DD0C7662621CA05008C8634 /* TabBarViewController.swift */,
 			);
 			path = Utils;
@@ -161,6 +170,15 @@
 				8861ED2D2621DF2C0059FE81 /* DateTimeView.swift */,
 			);
 			path = TicketView;
+			sourceTree = "<group>";
+		};
+		8861ED352621FD8A0059FE81 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8861ED2C2621DF1E0059FE81 /* TicketView */,
+				8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8877304A26209CF7001B5E25 /* SVG */ = {
@@ -185,9 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				8877305D2620C7DC001B5E25 /* ColorPalette.swift */,
-				8861ED2C2621DF1E0059FE81 /* TicketView */,
-				88A417232621D79C00718953 /* StringStyle.swift */,
 				88A417212621D61900718953 /* Font.swift */,
+				8861ED352621FD8A0059FE81 /* Components */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -299,6 +316,9 @@
 			isa = PBXGroup;
 			children = (
 				88A416F02621B9FD00718953 /* MainViewController.swift */,
+				8861ED312621E6BE0059FE81 /* GreetingView.swift */,
+				8861ED332621EF980059FE81 /* SearchForm.swift */,
+				8861ED38262200230059FE81 /* ForwardDateView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -486,16 +506,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DD0C76B2621CEBE008C8634 /* MapHeaderView.swift in Sources */,
+				8861ED322621E6BE0059FE81 /* GreetingView.swift in Sources */,
 				8877305E2620C7DC001B5E25 /* ColorPalette.swift in Sources */,
 				88A416F72621BCDA00718953 /* UserViewController.swift in Sources */,
 				5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */,
 				88A417222621D61900718953 /* Font.swift in Sources */,
 				8877306E26210555001B5E25 /* ChidoriPresentationController.swift in Sources */,
+				8861ED342621EF980059FE81 /* SearchForm.swift in Sources */,
 				88A416F52621BCB500718953 /* StationMapViewController.swift in Sources */,
 				8861ED2E2621DF2C0059FE81 /* DateTimeView.swift in Sources */,
 				8877306A26210523001B5E25 /* ChidoriMenu.swift in Sources */,
 				887730622620C9BF001B5E25 /* Macaw.Color++.swift in Sources */,
 				887730532620B95A001B5E25 /* WagonCell.swift in Sources */,
+				8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */,
 				888A0F5F26207BA900F16A48 /* AppDelegate.swift in Sources */,
 				5DD0C7612621C8B9008C8634 /* NavigationViewController.swift in Sources */,
 				8877306826210504001B5E25 /* ChidoriAnimationController.swift in Sources */,
@@ -507,6 +530,7 @@
 				887730512620B926001B5E25 /* UICollectionView++.swift in Sources */,
 				8861ED302621DFC30059FE81 /* TimePeriodView.swift in Sources */,
 				887730602620C941001B5E25 /* UIColor++.swift in Sources */,
+				8861ED372621FDA70059FE81 /* VerticalAlignmentLabel.swift in Sources */,
 				887730552620B97B001B5E25 /* WagonView.swift in Sources */,
 				88A416EB26211D8D00718953 /* UserLocationView.swift in Sources */,
 				88A417242621D79C00718953 /* StringStyle.swift in Sources */,

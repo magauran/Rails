@@ -8,6 +8,7 @@ target 'Rails' do
   pod 'TinyConstraints', '4.0.1'
   pod 'Pulsator', :git => 'https://github.com/shu223/Pulsator', :tag => '0.6.3'
   pod 'SwiftRichString', '3.7.2'
+  pod 'SkyFloatingLabelTextField', '4.0.0'
 end
 
 post_install do |installer|

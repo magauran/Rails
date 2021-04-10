@@ -28,4 +28,14 @@ enum Palette {
         static let normalIcon = UIColor(rgb: 0xB1B4BF)
         static let selectedIcon = UIColor(rgb: 0x031672)
     }
+
+    enum TextField {
+        static let lineColor = UIColor(rgb: 0xB5B7C2)
+        static let selectedTitleColor = UIColor(rgb: 0x031672)
+        static let selectedLineColor = UIColor(rgb: 0x031672)
+    }
+
+    enum Button {
+        static let primary = UIColor(rgb: 0xC00733)
+    }
 }

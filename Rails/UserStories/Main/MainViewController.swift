@@ -7,10 +7,6 @@
 
 import UIKit
 
-final class SearchForm: UIView {
-
-}
-
 final class MainViewController: UIViewController {
     init() {
         self.greetingView = GreetingView()
@@ -36,16 +32,21 @@ final class MainViewController: UIViewController {
             insets: .init(top: 0, left: 45, bottom: .nan, right: 45)
         )
 
+        self.view.addSubview(self.searchForm)
+        self.searchForm.topToBottom(of: self.greetingView, offset: 20)
+        self.searchForm.horizontalToSuperview(insets: .horizontal(21))
+
         // For test
         let ticketView = TicketView()
         self.view.addSubview(ticketView)
 
         ticketView.height(140)
         ticketView.width(320)
-        ticketView.center(in: self.view)
+        ticketView.center(in: self.view, offset: .init(x: 0, y: 100))
     }
 
     // MARK: - Private
     private let greetingView: GreetingView
     private let searchForm: SearchForm
+    
 }

@@ -15,3 +15,22 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
+
+extension UIColor {
+    func image() -> UIImage? {
+        defer {
+            UIGraphicsEndImageContext()
+        }
+
+        let rect = CGRect(origin: .zero, size: CGSize(width: 1, height: 1))
+
+        UIGraphicsBeginImageContext(rect.size)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+
+        context.setFillColor(self.cgColor)
+        context.fill(rect)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        return image
+    }
+}
