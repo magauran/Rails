@@ -70,11 +70,11 @@ extension StationSpotsCollectionView: UICollectionViewDataSource {
         cell.data = self.data[indexPath.item]
         
         
-        if let mainViewController = self.viewController {
-            if self.traitCollection.forceTouchCapability == .available {
-                mainViewController.registerForPreviewing(with: mainViewController as! UIViewControllerPreviewingDelegate, sourceView: cell)
-            }
-        }
+//        if let mainViewController = self.viewController {
+//            if self.traitCollection.forceTouchCapability == .available {
+//                mainViewController.registerForPreviewing(with: mainViewController as! UIViewControllerPreviewingDelegate, sourceView: cell)
+//            }
+//        }
         
         cell.delegate = self.viewController as? SpotCVCDelegate
         return cell

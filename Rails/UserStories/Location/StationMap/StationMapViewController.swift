@@ -127,7 +127,7 @@ final class StationMapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        (self.navigationController as? NavigationViewController)?.setNavbarTransculent()
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     private func setupViews() {
