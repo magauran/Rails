@@ -44,13 +44,9 @@ final class WagonCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        self.view.frame = self.bounds
-    }
-
     private func setup() {
         self.contentView.addSubview(self.view)
+        self.view.edgesToSuperview(insets: .horizontal(16))
         self.contentView.addSubview(self.userLocationView)
 
         self.userLocationView.isHidden = true

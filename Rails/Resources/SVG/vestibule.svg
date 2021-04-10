@@ -1,0 +1,8 @@
+<svg width="378" height="154" viewBox="0 0 378 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2" y1="-2" x2="138" y2="-2" transform="matrix(1 -1.29515e-08 -1.29515e-08 -1 238 0)" stroke="#7E8074" stroke-width="4" stroke-linecap="round"/>
+<line x1="2" y1="-2" x2="138" y2="-2" transform="matrix(1 -1.29515e-08 -1.29515e-08 -1 0 0)" stroke="#7E8074" stroke-width="4" stroke-linecap="round"/>
+<line x1="2" y1="-2" x2="138" y2="-2" transform="matrix(1 -1.29515e-08 -1.29515e-08 -1 238 150)" stroke="#7E8074" stroke-width="4" stroke-linecap="round"/>
+<line x1="2" y1="-2" x2="138" y2="-2" transform="matrix(1 -1.29515e-08 -1.29515e-08 -1 0 150)" stroke="#7E8074" stroke-width="4" stroke-linecap="round"/>
+<path opacity="0.2" d="M371.549 54L378 54L378 100.142L371.549 100.142C368.699 100.142 366.389 97.8468 366.389 95.0153L366.389 59.1269C366.389 56.2954 368.699 54 371.549 54Z" fill="#C2BDB5"/>
+<path opacity="0.2" d="M6.45077 100.142L6.29803e-05 100.142L6.70407e-05 53.9998L6.45077 53.9998C9.30087 53.9998 11.6113 56.2952 11.6113 59.1268L11.6113 95.0152C11.6113 97.8467 9.30087 100.142 6.45077 100.142Z" fill="#C2BDB5"/>
+</svg>

@@ -8,9 +8,26 @@
 import UIKit
 import TinyConstraints
 
+protocol TrainPart {
+
+}
+
+struct Wagon: TrainPart {
+
+}
+
+struct Vestibule: TrainPart {
+
+}
+
 final class TrainMapViewController: UIViewController {
     private let collectionView: UICollectionView
     private let collectionViewFlowLayout: UICollectionViewFlowLayout
+    private let trainParts: [TrainPart] = {
+        var array: [TrainPart] = [TrainPart](repeatingValues: [Wagon(), Vestibule()], count: 7)
+        array.append(Wagon())
+        return array
+    }()
 
     private lazy var contextMenu: UIMenu = {
         var postActions: [UIMenuElement] = []
@@ -52,6 +69,7 @@ final class TrainMapViewController: UIViewController {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(WagonCell.self)
+        self.collectionView.register(VestibuleCell.self)
 
         self.collectionView.backgroundColor = .white
 
@@ -63,41 +81,45 @@ final class TrainMapViewController: UIViewController {
 
 extension TrainMapViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        self.trainParts.count
     }
 
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell: WagonCell = collectionView.dequeueReusableCell(for: indexPath)
-//        cell.actions.didTap = { [weak self, weak cell] point in
-//            guard let self = self, let cell = cell else { return }
-//            let pointInCollectionView = self.collectionView.convert(point, from: cell)
-//            let pointInView = self.view.convert(pointInCollectionView, from: self.collectionView)
-//            let chidoriMenu = ChidoriMenu(menu: self.contextMenu, summonPoint: pointInView)
-//            self.present(chidoriMenu, animated: true, completion: nil)
-//        }
-        cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }
-        let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongTap))
-        longTapGestureRecognizer.minimumPressDuration = 0.5
-        cell.addGestureRecognizer(longTapGestureRecognizer)
+        let trainPart = self.trainParts[indexPath.item]
 
-        // For test
-        if indexPath.item == 0 {
-            cell.userLocation = CGPoint(x: 210, y: 320)
-        } else {
-            cell.userLocation = nil
+        switch trainPart {
+            case let wagon as Wagon:
+                let cell: WagonCell = collectionView.dequeueReusableCell(for: indexPath)
+
+                cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }
+                let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongTap))
+                longTapGestureRecognizer.minimumPressDuration = 0.5
+                cell.addGestureRecognizer(longTapGestureRecognizer)
+
+                // For test
+                if indexPath.item == 0 {
+                    cell.userLocation = CGPoint(x: 210, y: 320)
+                } else {
+                    cell.userLocation = nil
+                }
+
+                return cell
+            case let vestibule as Vestibule:
+                let cell: VestibuleCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            default:
+                fatalError("Sorry.")
         }
-
-        return cell
     }
 
     @objc
     private func onLongTap(recognizer: UILongPressGestureRecognizer) {
         guard recognizer.state == .began else { return }
         let point = recognizer.location(in: self.view)
-        let adjustedPoint = self.navigationController!.view.convert(point, from: self.view)
+        guard let adjustedPoint = self.navigationController?.view.convert(point, from: self.view) else { return }
 
         let chidoriMenu = ChidoriMenu(menu: self.contextMenu, summonPoint: adjustedPoint)
         self.present(chidoriMenu, animated: true, completion: nil)
@@ -114,10 +136,24 @@ extension TrainMapViewController: UICollectionViewDelegateFlowLayout {
         let sectionInsets = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
         let sectionSideInsets = sectionInsets.left + sectionInsets.right
         let width = self.collectionView.frame.width - contentSideInsets - sectionSideInsets
-        return CGSize(
-            width: width,
-            height: width * 2.44
-        )
+
+        let trainPart = self.trainParts[indexPath.item]
+
+        switch trainPart {
+            case is Wagon:
+                return CGSize(
+                    width: width,
+                    height: (width - 32) * 3.645
+                )
+            case is Vestibule:
+                return CGSize(
+                    width: width,
+                    height: width * 0.41
+                )
+            default:
+                assertionFailure()
+                return .zero
+        }
     }
 
     func collectionView(
@@ -125,6 +161,18 @@ extension TrainMapViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
-        UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        .zero
+    }
+}
+
+extension Array {
+    fileprivate init (repeatingValues arr: Array, count: Int) {
+        precondition(!arr.isEmpty, "Initialization values cannot be empty")
+        precondition(count > 0, "Count cannot be less than 1")
+        var newArr = Array<Element>()
+        for i in 0..<count {
+            newArr.append(arr[i % arr.count])
+        }
+        self = newArr
     }
 }

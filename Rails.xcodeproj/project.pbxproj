@@ -19,7 +19,10 @@
 		8861ED372621FDA70059FE81 /* VerticalAlignmentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */; };
 		8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED38262200230059FE81 /* ForwardDateView.swift */; };
 		8861ED3B26220DA30059FE81 /* AutoKeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED3A26220DA30059FE81 /* AutoKeyboardScrollView.swift */; };
-		8861ED3F262212D70059FE81 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8861ED3E262212D70059FE81 /* wagon.svg */; };
+		8861ED412622163C0059FE81 /* VestibuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED402622163C0059FE81 /* VestibuleCell.swift */; };
+		8861ED432622167F0059FE81 /* VestibuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED422622167F0059FE81 /* VestibuleView.swift */; };
+		8861ED4726221AA70059FE81 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8861ED4626221AA70059FE81 /* wagon.svg */; };
+		8861ED4926221B4C0059FE81 /* vestibule.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8861ED4826221B4C0059FE81 /* vestibule.svg */; };
 		8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877304D2620B828001B5E25 /* TrainMapViewController.swift */; };
 		887730512620B926001B5E25 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730502620B926001B5E25 /* UICollectionView++.swift */; };
 		887730532620B95A001B5E25 /* WagonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730522620B95A001B5E25 /* WagonCell.swift */; };
@@ -76,7 +79,10 @@
 		8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignmentLabel.swift; sourceTree = "<group>"; };
 		8861ED38262200230059FE81 /* ForwardDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardDateView.swift; sourceTree = "<group>"; };
 		8861ED3A26220DA30059FE81 /* AutoKeyboardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoKeyboardScrollView.swift; sourceTree = "<group>"; };
-		8861ED3E262212D70059FE81 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
+		8861ED402622163C0059FE81 /* VestibuleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VestibuleCell.swift; sourceTree = "<group>"; };
+		8861ED422622167F0059FE81 /* VestibuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VestibuleView.swift; sourceTree = "<group>"; };
+		8861ED4626221AA70059FE81 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
+		8861ED4826221B4C0059FE81 /* vestibule.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vestibule.svg; sourceTree = "<group>"; };
 		8877304D2620B828001B5E25 /* TrainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMapViewController.swift; sourceTree = "<group>"; };
 		887730502620B926001B5E25 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
 		887730522620B95A001B5E25 /* WagonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagonCell.swift; sourceTree = "<group>"; };
@@ -187,7 +193,8 @@
 		8877304A26209CF7001B5E25 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
-				8861ED3E262212D70059FE81 /* wagon.svg */,
+				8861ED4826221B4C0059FE81 /* vestibule.svg */,
+				8861ED4626221AA70059FE81 /* wagon.svg */,
 			);
 			path = SVG;
 			sourceTree = "<group>";
@@ -248,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				887730522620B95A001B5E25 /* WagonCell.swift */,
+				8861ED402622163C0059FE81 /* VestibuleCell.swift */,
+				8861ED422622167F0059FE81 /* VestibuleView.swift */,
 				88A416EA26211D8D00718953 /* UserLocationView.swift */,
 				887730542620B97B001B5E25 /* WagonView.swift */,
 				8877304D2620B828001B5E25 /* TrainMapViewController.swift */,
@@ -437,6 +446,7 @@
 			files = (
 				88A417182621D5FA00718953 /* gilroy-heavyitalic.ttf in Resources */,
 				88A4171A2621D5FA00718953 /* gilroy-thin.ttf in Resources */,
+				8861ED4926221B4C0059FE81 /* vestibule.svg in Resources */,
 				88A4171D2621D5FA00718953 /* gilroy-blackitalic.ttf in Resources */,
 				88A417162621D5FA00718953 /* gilroy-extrabolditalic.ttf in Resources */,
 				88A4171F2621D5FA00718953 /* gilroy-ultralightitalic.ttf in Resources */,
@@ -446,7 +456,6 @@
 				88A4171C2621D5FA00718953 /* gilroy-bolditalic.ttf in Resources */,
 				88A4170F2621D5F700718953 /* gilroy-black.ttf in Resources */,
 				88A417122621D5FA00718953 /* gilroy-semibold.ttf in Resources */,
-				8861ED3F262212D70059FE81 /* wagon.svg in Resources */,
 				888A0F6B26207BAB00F16A48 /* LaunchScreen.storyboard in Resources */,
 				88A417132621D5FA00718953 /* gilroy-heavy.ttf in Resources */,
 				88A417192621D5FA00718953 /* gilroy-lightitalic.ttf in Resources */,
@@ -456,6 +465,7 @@
 				88A4171B2621D5FA00718953 /* gilroy-thinitalic.ttf in Resources */,
 				88A417142621D5FA00718953 /* gilroy-medium.ttf in Resources */,
 				88A417152621D5FA00718953 /* gilroy-regular.ttf in Resources */,
+				8861ED4726221AA70059FE81 /* wagon.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +534,9 @@
 				887730532620B95A001B5E25 /* WagonCell.swift in Sources */,
 				8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */,
 				888A0F5F26207BA900F16A48 /* AppDelegate.swift in Sources */,
+				8861ED412622163C0059FE81 /* VestibuleCell.swift in Sources */,
 				5DD0C7612621C8B9008C8634 /* NavigationViewController.swift in Sources */,
+				8861ED432622167F0059FE81 /* VestibuleView.swift in Sources */,
 				8877306826210504001B5E25 /* ChidoriAnimationController.swift in Sources */,
 				8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */,
 				8877306C2621053C001B5E25 /* ChidoriMenuTableViewCell.swift in Sources */,
