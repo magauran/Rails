@@ -57,7 +57,7 @@ final class DateTimeView: UIView {
     private static func makeTimeLabel() -> UILabel {
         let label = UILabel()
         label.style = StringStyle {
-            $0.font = Font.regular(20)
+            $0.font = Font.medium(20)
             $0.color = Palette.Text.primary
             $0.minimumLineHeight = 20
             $0.maximumLineHeight = 20
