@@ -74,6 +74,7 @@ final class MainViewController: UIViewController {
         ticketContainerView.backgroundColor = UIColor(rgb: 0xB5B7C2, alpha: 0.2)
         ticketContainerView.addSubview(ticketView)
         ticketView.edgesToSuperview(insets: .init(top: 28, left: 28, bottom: 28, right: 28))
+        ticketView.addTarget(self, action: #selector(self.didTapTicketView), for: .touchUpInside)
 
         contentView.addSubview(ticketContainerView)
         ticketContainerView.edgesToSuperview(excluding: .top, usingSafeArea: true)
@@ -83,5 +84,10 @@ final class MainViewController: UIViewController {
     private func openTrainMap() {
         let vc = TrainMapViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc
+    private func didTapTicketView() {
+        self.openTrainMap()
     }
 }

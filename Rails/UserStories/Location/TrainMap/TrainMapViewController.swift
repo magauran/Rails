@@ -75,6 +75,7 @@ final class TrainMapViewController: UIViewController {
         self.collectionView.contentInset = UIEdgeInsets(top: 32, left: 0, bottom: 100 + 16, right: 0)
 
         let ticketView = TicketView()
+        ticketView.isEnabled = false
         ticketView.needsHideTimePeriod = true
         self.view.addSubview(ticketView)
         ticketView.edgesToSuperview(excluding: .top, insets: .init(top: .nan, left: 27, bottom: 27, right: 27), usingSafeArea: true)
@@ -100,6 +101,7 @@ extension TrainMapViewController: UICollectionViewDataSource {
                 cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }
                 let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongTap))
                 longTapGestureRecognizer.minimumPressDuration = 0.5
+                longTapGestureRecognizer.cancelsTouchesInView = true
                 cell.addGestureRecognizer(longTapGestureRecognizer)
 
                 // For test

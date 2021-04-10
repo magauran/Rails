@@ -8,7 +8,17 @@
 import UIKit
 import TinyConstraints
 
-final class TicketView: UIView {
+final class TicketView: UIControl {
+    override var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted {
+                self.alpha = 0.7
+            } else {
+                self.alpha = 1.0
+            }
+        }
+    }
+
     var needsHideTimePeriod: Bool = false {
         didSet {
             self.timePeriodView.isHidden = self.needsHideTimePeriod
@@ -39,6 +49,14 @@ final class TicketView: UIView {
             cornerHeight: Style.cornerRadius,
             transform: nil
         )
+    }
+
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        false
+    }
+
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        self.point(inside: point, with: event) ? self : nil
     }
 
     // MARK: - Private
@@ -77,6 +95,8 @@ final class TicketView: UIView {
 
         self.addSubview(stackView)
         stackView.edgesToSuperview(insets: .init(top: 18, left: 24, bottom: 18, right: 24))
+
+        stackView.isUserInteractionEnabled = false
     }
 
     private func setupShadow() {
