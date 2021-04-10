@@ -14,4 +14,9 @@ enum MacawPalette {
 
 enum Palette {
     static let someColor = UIColor(rgb: 0x001188, alpha: 0.8)
+
+    enum TabBar {
+        static let normalIcon = UIColor(rgb: 0xB1B4BF)
+        static let selectedIcon = UIColor(rgb: 0x031672)
+    }
 }

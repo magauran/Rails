@@ -15,10 +15,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let viewController = TrainMapViewController()
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+
+        let mainViewController = MainViewController()
+        mainViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "feed"), tag: 0)
+
+        let notificationsViewController = NotificationsViewController()
+        notificationsViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "notify"), tag: 0)
+
+        let locationViewController = StationMapViewController()
+        locationViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "location"), tag: 0)
+
+        let userViewController = UserViewController()
+        userViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "heart-rate"), tag: 0)
+
+        let viewControllers: [UIViewController] = [
+            mainViewController,
+            notificationsViewController,
+            locationViewController,
+            userViewController,
+        ]
+
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = viewControllers
+
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = .white
+        setTabBarItemColors(appearance.stackedLayoutAppearance)
+        setTabBarItemColors(appearance.inlineLayoutAppearance)
+        setTabBarItemColors(appearance.compactInlineLayoutAppearance)
+
+        tabBarController.tabBar.standardAppearance = appearance
+
+        window.rootViewController = tabBarController
 
         self.window = window
         window.makeKeyAndVisible()
+    }
+
+    private func setTabBarItemColors(_ itemAppearance: UITabBarItemAppearance) {
+        itemAppearance.normal.iconColor = Palette.TabBar.normalIcon
+        itemAppearance.selected.iconColor = Palette.TabBar.selectedIcon
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
