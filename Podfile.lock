@@ -1,6 +1,7 @@
 PODS:
   - Macaw (0.9.7):
     - SWXMLHash
+  - PanModal (1.2.7)
   - Pulsator (0.6.0)
   - SkyFloatingLabelTextField (4.0.0)
   - SwiftRichString (3.7.2)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Macaw (from `https://github.com/magauran/Macaw.git`, branch `master`)
+  - PanModal (= 1.2.7)
   - Pulsator (from `https://github.com/shu223/Pulsator`, tag `0.6.3`)
   - SkyFloatingLabelTextField (= 4.0.0)
   - SwiftRichString (= 3.7.2)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - PanModal
     - SkyFloatingLabelTextField
     - SwiftRichString
     - SWXMLHash
@@ -39,12 +42,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Macaw: 4a931baf9a9826b06d0d8ecf300014c962ab9d50
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
   Pulsator: eb5a9f9be4bdcbd19903984c65deca6aabe50a17
   SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
   SWXMLHash: 9cc0c2e4807926c74377724aa8722ee5707a0485
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 609bc296d44abd6db8b43247ec79487c9c1be107
+PODFILE CHECKSUM: 4fc726fb44a9c121fa4aa2b6a1be9e130bfad390
 
 COCOAPODS: 1.10.0

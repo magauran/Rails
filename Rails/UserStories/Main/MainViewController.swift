@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PanModal
 
 final class MainViewController: UIViewController {
     init() {
@@ -24,11 +25,17 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-        
-        // For test
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let vc = TrainMapViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
+            let inTrainViewController = InTrainViewController()
+            inTrainViewController.onConfirm = { [weak self, weak inTrainViewController] in
+                inTrainViewController?.dismiss(animated: true)
+                self?.openTrainMap()
+            }
+            inTrainViewController.onDismiss = { [weak inTrainViewController] in
+                inTrainViewController?.dismiss(animated: true)
+            }
+            self.presentPanModal(inTrainViewController)
         }
     }
 
@@ -71,5 +78,10 @@ final class MainViewController: UIViewController {
         contentView.addSubview(ticketContainerView)
         ticketContainerView.edgesToSuperview(excluding: .top, usingSafeArea: true)
         ticketContainerView.topToBottom(of: self.searchForm, offset: 46)
+    }
+
+    private func openTrainMap() {
+        let vc = TrainMapViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

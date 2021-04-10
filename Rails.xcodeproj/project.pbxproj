@@ -26,6 +26,7 @@
 		8861ED4B2622221D0059FE81 /* toilet.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8861ED4A2622221D0059FE81 /* toilet.svg */; };
 		8861ED4D262222310059FE81 /* ToiletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED4C262222310059FE81 /* ToiletCell.swift */; };
 		8861ED4F262222390059FE81 /* ToiletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED4E262222390059FE81 /* ToiletView.swift */; };
+		8861ED522622416B0059FE81 /* InTrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED512622416B0059FE81 /* InTrainViewController.swift */; };
 		8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877304D2620B828001B5E25 /* TrainMapViewController.swift */; };
 		887730512620B926001B5E25 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730502620B926001B5E25 /* UICollectionView++.swift */; };
 		887730532620B95A001B5E25 /* WagonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730522620B95A001B5E25 /* WagonCell.swift */; };
@@ -89,6 +90,7 @@
 		8861ED4A2622221D0059FE81 /* toilet.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toilet.svg; sourceTree = "<group>"; };
 		8861ED4C262222310059FE81 /* ToiletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletCell.swift; sourceTree = "<group>"; };
 		8861ED4E262222390059FE81 /* ToiletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletView.swift; sourceTree = "<group>"; };
+		8861ED512622416B0059FE81 /* InTrainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTrainViewController.swift; sourceTree = "<group>"; };
 		8877304D2620B828001B5E25 /* TrainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMapViewController.swift; sourceTree = "<group>"; };
 		887730502620B926001B5E25 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
 		887730522620B95A001B5E25 /* WagonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagonCell.swift; sourceTree = "<group>"; };
@@ -196,6 +198,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8861ED502622415B0059FE81 /* InTrain */ = {
+			isa = PBXGroup;
+			children = (
+				8861ED512622416B0059FE81 /* InTrainViewController.swift */,
+			);
+			path = InTrain;
+			sourceTree = "<group>";
+		};
 		8877304A26209CF7001B5E25 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		8877305A2620C756001B5E25 /* UserStories */ = {
 			isa = PBXGroup;
 			children = (
+				8861ED502622415B0059FE81 /* InTrain */,
 				88A416EC2621B9B200718953 /* Main */,
 				88A416ED2621B9BA00718953 /* Notifications */,
 				88A416EE2621B9D600718953 /* Location */,
@@ -554,6 +565,7 @@
 				88A416F12621B9FD00718953 /* MainViewController.swift in Sources */,
 				88A416F92621C90800718953 /* TicketView.swift in Sources */,
 				8861ED2B2621D8260059FE81 /* ContainerWrapper.swift in Sources */,
+				8861ED522622416B0059FE81 /* InTrainViewController.swift in Sources */,
 				887730512620B926001B5E25 /* UICollectionView++.swift in Sources */,
 				8861ED302621DFC30059FE81 /* TimePeriodView.swift in Sources */,
 				887730602620C941001B5E25 /* UIColor++.swift in Sources */,

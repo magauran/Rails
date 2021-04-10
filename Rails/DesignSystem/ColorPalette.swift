@@ -41,5 +41,7 @@ enum Palette {
 
     enum Button {
         static let primary = UIColor(rgb: 0xC00733)
+        static let secondary = UIColor(rgb: 0xFFFFFF)
+        static let secondaryLabel = UIColor(rgb: 0xC00733)
     }
 }
