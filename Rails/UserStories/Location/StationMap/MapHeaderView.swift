@@ -13,7 +13,7 @@ class MapHeaderView: UIView {
         let label = UILabel(frame: CGRect.zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
-        label.textColor = Palette.textColor
+        label.textColor = Palette.Text.primary
         label.textAlignment = .natural
         label.highlightedTextColor = Palette.grayishBlackColor
         label.numberOfLines = 3
@@ -24,7 +24,7 @@ class MapHeaderView: UIView {
         let label = UILabel(frame: CGRect.zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
-        label.textColor = Palette.textColor
+        label.textColor = Palette.Text.primary
         label.textAlignment = .natural
         label.highlightedTextColor = Palette.grayishBlackColor
         label.numberOfLines = 0

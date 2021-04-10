@@ -8,9 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		12AF346CAF823A23AEDBB83C /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */; };
+		5DC187E72622247900D4C794 /* SearchFloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC187E62622247900D4C794 /* SearchFloatingView.swift */; };
 		5DD0C7612621C8B9008C8634 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */; };
 		5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7662621CA05008C8634 /* TabBarViewController.swift */; };
 		5DD0C76B2621CEBE008C8634 /* MapHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */; };
+		5DF1FE1826222D4E00BD9A4D /* StationSpotsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE1726222D4E00BD9A4D /* StationSpotsCollectionView.swift */; };
+		5DF1FE1B26222D7800BD9A4D /* CenteredFloatingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE1A26222D7800BD9A4D /* CenteredFloatingCollectionViewLayout.swift */; };
+		5DF1FE1F26222DB000BD9A4D /* SpotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE1D26222DB000BD9A4D /* SpotCollectionViewCell.swift */; };
+		5DF1FE2026222DB000BD9A4D /* SpotCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1FE1E26222DB000BD9A4D /* SpotCollectionViewCell.xib */; };
+		5DF1FE2426223A6100BD9A4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE2326223A6100BD9A4D /* SearchViewController.swift */; };
+		5DF1FE2826223A7900BD9A4D /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1FE2726223A7900BD9A4D /* SearchViewController.xib */; };
+		5DF1FE2B26223B5400BD9A4D /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE2A26223B5400BD9A4D /* Spot.swift */; };
+		5DF1FE332622413500BD9A4D /* SearchCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE312622413500BD9A4D /* SearchCategoryCollectionViewCell.swift */; };
+		5DF1FE342622413500BD9A4D /* SearchCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1FE322622413500BD9A4D /* SearchCategoryCollectionViewCell.xib */; };
+		5DF1FE372622421D00BD9A4D /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE362622421D00BD9A4D /* SearchCategory.swift */; };
+		5DF1FE3C262245D700BD9A4D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE3A262245D700BD9A4D /* SearchTableViewCell.swift */; };
+		5DF1FE3D262245D700BD9A4D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1FE3B262245D700BD9A4D /* SearchTableViewCell.xib */; };
+		5DF1FE41262247F200BD9A4D /* SpotDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE3F262247F200BD9A4D /* SpotDetailsViewController.swift */; };
+		5DF1FE42262247F200BD9A4D /* SpotDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1FE40262247F200BD9A4D /* SpotDetailsViewController.xib */; };
+		5DF1FE4F26224EE400BD9A4D /* NotificationsableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1FE4D26224EE400BD9A4D /* NotificationsableViewCell.swift */; };
+		5DF1FE5026224EE400BD9A4D /* NotificationsableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF1FE4E26224EE400BD9A4D /* NotificationsableViewCell.xib */; };
 		8861ED2B2621D8260059FE81 /* ContainerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */; };
 		8861ED2E2621DF2C0059FE81 /* DateTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2D2621DF2C0059FE81 /* DateTimeView.swift */; };
 		8861ED302621DFC30059FE81 /* TimePeriodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2F2621DFC30059FE81 /* TimePeriodView.swift */; };
@@ -73,9 +90,26 @@
 
 /* Begin PBXFileReference section */
 		20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC187E62622247900D4C794 /* SearchFloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFloatingView.swift; sourceTree = "<group>"; };
 		5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		5DD0C7662621CA05008C8634 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHeaderView.swift; sourceTree = "<group>"; };
+		5DF1FE1726222D4E00BD9A4D /* StationSpotsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSpotsCollectionView.swift; sourceTree = "<group>"; };
+		5DF1FE1A26222D7800BD9A4D /* CenteredFloatingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredFloatingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		5DF1FE1D26222DB000BD9A4D /* SpotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotCollectionViewCell.swift; sourceTree = "<group>"; };
+		5DF1FE1E26222DB000BD9A4D /* SpotCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotCollectionViewCell.xib; sourceTree = "<group>"; };
+		5DF1FE2326223A6100BD9A4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5DF1FE2726223A7900BD9A4D /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		5DF1FE2A26223B5400BD9A4D /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
+		5DF1FE312622413500BD9A4D /* SearchCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		5DF1FE322622413500BD9A4D /* SearchCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		5DF1FE362622421D00BD9A4D /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCategory.swift; sourceTree = "<group>"; };
+		5DF1FE3A262245D700BD9A4D /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		5DF1FE3B262245D700BD9A4D /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		5DF1FE3F262247F200BD9A4D /* SpotDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailsViewController.swift; sourceTree = "<group>"; };
+		5DF1FE40262247F200BD9A4D /* SpotDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotDetailsViewController.xib; sourceTree = "<group>"; };
+		5DF1FE4D26224EE400BD9A4D /* NotificationsableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsableViewCell.swift; sourceTree = "<group>"; };
+		5DF1FE4E26224EE400BD9A4D /* NotificationsableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsableViewCell.xib; sourceTree = "<group>"; };
 		8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerWrapper.swift; sourceTree = "<group>"; };
 		8861ED2D2621DF2C0059FE81 /* DateTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeView.swift; sourceTree = "<group>"; };
 		8861ED2F2621DFC30059FE81 /* TimePeriodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePeriodView.swift; sourceTree = "<group>"; };
@@ -180,6 +214,20 @@
 				8861ED5326225AF10059FE81 /* NotificationRegistrar.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		5DF1FE2226223A5000BD9A4D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1FE2326223A6100BD9A4D /* SearchViewController.swift */,
+				5DF1FE2726223A7900BD9A4D /* SearchViewController.xib */,
+				5DF1FE312622413500BD9A4D /* SearchCategoryCollectionViewCell.swift */,
+				5DF1FE322622413500BD9A4D /* SearchCategoryCollectionViewCell.xib */,
+				5DF1FE362622421D00BD9A4D /* SearchCategory.swift */,
+				5DF1FE3A262245D700BD9A4D /* SearchTableViewCell.swift */,
+				5DF1FE3B262245D700BD9A4D /* SearchTableViewCell.xib */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		8861ED2C2621DF1E0059FE81 /* TicketView */ = {
@@ -292,6 +340,14 @@
 			children = (
 				88A416F42621BCB500718953 /* StationMapViewController.swift */,
 				5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */,
+				5DC187E62622247900D4C794 /* SearchFloatingView.swift */,
+				5DF1FE1726222D4E00BD9A4D /* StationSpotsCollectionView.swift */,
+				5DF1FE1A26222D7800BD9A4D /* CenteredFloatingCollectionViewLayout.swift */,
+				5DF1FE1D26222DB000BD9A4D /* SpotCollectionViewCell.swift */,
+				5DF1FE1E26222DB000BD9A4D /* SpotCollectionViewCell.xib */,
+				5DF1FE2A26223B5400BD9A4D /* Spot.swift */,
+				5DF1FE3F262247F200BD9A4D /* SpotDetailsViewController.swift */,
+				5DF1FE40262247F200BD9A4D /* SpotDetailsViewController.xib */,
 			);
 			path = StationMap;
 			sourceTree = "<group>";
@@ -362,6 +418,8 @@
 			isa = PBXGroup;
 			children = (
 				88A416F22621BA2E00718953 /* NotificationsViewController.swift */,
+				5DF1FE4D26224EE400BD9A4D /* NotificationsableViewCell.swift */,
+				5DF1FE4E26224EE400BD9A4D /* NotificationsableViewCell.xib */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -369,6 +427,7 @@
 		88A416EE2621B9D600718953 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				5DF1FE2226223A5000BD9A4D /* Search */,
 				8877305C2620C763001B5E25 /* StationMap */,
 				8877305B2620C75D001B5E25 /* TrainMap */,
 			);
@@ -475,8 +534,10 @@
 				88A4171F2621D5FA00718953 /* gilroy-ultralightitalic.ttf in Resources */,
 				8861ED4B2622221D0059FE81 /* toilet.svg in Resources */,
 				88A417102621D5FA00718953 /* gilroy-regularitalic.ttf in Resources */,
+				5DF1FE2026222DB000BD9A4D /* SpotCollectionViewCell.xib in Resources */,
 				88A417202621D5FA00718953 /* gilroy-semibolditalic.ttf in Resources */,
 				88A4171E2621D5FA00718953 /* gilroy-mediumitalic.ttf in Resources */,
+				5DF1FE42262247F200BD9A4D /* SpotDetailsViewController.xib in Resources */,
 				88A4171C2621D5FA00718953 /* gilroy-bolditalic.ttf in Resources */,
 				88A4170F2621D5F700718953 /* gilroy-black.ttf in Resources */,
 				88A417122621D5FA00718953 /* gilroy-semibold.ttf in Resources */,
@@ -484,7 +545,11 @@
 				88A417132621D5FA00718953 /* gilroy-heavy.ttf in Resources */,
 				88A417192621D5FA00718953 /* gilroy-lightitalic.ttf in Resources */,
 				888A0F6826207BAB00F16A48 /* Assets.xcassets in Resources */,
+				5DF1FE342622413500BD9A4D /* SearchCategoryCollectionViewCell.xib in Resources */,
 				88A417172621D5FA00718953 /* gilroy-bold.ttf in Resources */,
+				5DF1FE2826223A7900BD9A4D /* SearchViewController.xib in Resources */,
+				5DF1FE3D262245D700BD9A4D /* SearchTableViewCell.xib in Resources */,
+				5DF1FE5026224EE400BD9A4D /* NotificationsableViewCell.xib in Resources */,
 				88A417112621D5FA00718953 /* gilroy-ultralight.ttf in Resources */,
 				88A4171B2621D5FA00718953 /* gilroy-thinitalic.ttf in Resources */,
 				88A417142621D5FA00718953 /* gilroy-medium.ttf in Resources */,
@@ -547,6 +612,7 @@
 				8877305E2620C7DC001B5E25 /* ColorPalette.swift in Sources */,
 				88A416F72621BCDA00718953 /* UserViewController.swift in Sources */,
 				5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */,
+				5DF1FE372622421D00BD9A4D /* SearchCategory.swift in Sources */,
 				88A417222621D61900718953 /* Font.swift in Sources */,
 				8877306E26210555001B5E25 /* ChidoriPresentationController.swift in Sources */,
 				8861ED342621EF980059FE81 /* SearchForm.swift in Sources */,
@@ -555,21 +621,31 @@
 				8861ED2E2621DF2C0059FE81 /* DateTimeView.swift in Sources */,
 				8877306A26210523001B5E25 /* ChidoriMenu.swift in Sources */,
 				8861ED3B26220DA30059FE81 /* AutoKeyboardScrollView.swift in Sources */,
+				5DF1FE1F26222DB000BD9A4D /* SpotCollectionViewCell.swift in Sources */,
 				887730622620C9BF001B5E25 /* Macaw.Color++.swift in Sources */,
 				887730532620B95A001B5E25 /* WagonCell.swift in Sources */,
 				8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */,
+				5DF1FE1B26222D7800BD9A4D /* CenteredFloatingCollectionViewLayout.swift in Sources */,
+				5DF1FE4F26224EE400BD9A4D /* NotificationsableViewCell.swift in Sources */,
 				888A0F5F26207BA900F16A48 /* AppDelegate.swift in Sources */,
 				8861ED412622163C0059FE81 /* VestibuleCell.swift in Sources */,
+				5DF1FE41262247F200BD9A4D /* SpotDetailsViewController.swift in Sources */,
 				5DD0C7612621C8B9008C8634 /* NavigationViewController.swift in Sources */,
 				8861ED432622167F0059FE81 /* VestibuleView.swift in Sources */,
 				8877306826210504001B5E25 /* ChidoriAnimationController.swift in Sources */,
+				5DF1FE3C262245D700BD9A4D /* SearchTableViewCell.swift in Sources */,
 				8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */,
 				8877306C2621053C001B5E25 /* ChidoriMenuTableViewCell.swift in Sources */,
 				88A416F12621B9FD00718953 /* MainViewController.swift in Sources */,
+				5DC187E72622247900D4C794 /* SearchFloatingView.swift in Sources */,
 				88A416F92621C90800718953 /* TicketView.swift in Sources */,
 				8861ED2B2621D8260059FE81 /* ContainerWrapper.swift in Sources */,
 				8861ED522622416B0059FE81 /* InTrainViewController.swift in Sources */,
+				5DF1FE2426223A6100BD9A4D /* SearchViewController.swift in Sources */,
+				5DF1FE1826222D4E00BD9A4D /* StationSpotsCollectionView.swift in Sources */,
+				5DF1FE332622413500BD9A4D /* SearchCategoryCollectionViewCell.swift in Sources */,
 				887730512620B926001B5E25 /* UICollectionView++.swift in Sources */,
+				5DF1FE2B26223B5400BD9A4D /* Spot.swift in Sources */,
 				8861ED302621DFC30059FE81 /* TimePeriodView.swift in Sources */,
 				887730602620C941001B5E25 /* UIColor++.swift in Sources */,
 				8861ED5426225AF10059FE81 /* NotificationRegistrar.swift in Sources */,
