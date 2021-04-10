@@ -54,6 +54,7 @@ final class TicketView: UIView {
 
         let topLabels = UIStackView(arrangedSubviews: [
             self.carLabel,
+            UIView(),
             self.seatLabel,
         ])
 
@@ -90,6 +91,7 @@ final class TicketView: UIView {
             $0.maximumLineHeight = 17
         }
         label.styledText = "Car 07"
+        label.textAlignment = .left
         return label
     }
 
@@ -102,6 +104,7 @@ final class TicketView: UIView {
             $0.maximumLineHeight = 17
         }
         label.styledText = "Seat 10"
+        label.textAlignment = .right
         return label
     }
 
