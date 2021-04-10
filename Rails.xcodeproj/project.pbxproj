@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		12AF346CAF823A23AEDBB83C /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */; };
-		5DD0C75E2621C7DF008C8634 /* ContainerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C75D2621C7DF008C8634 /* ContainerWrapper.swift */; };
 		5DD0C7612621C8B9008C8634 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */; };
 		5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7662621CA05008C8634 /* TabBarViewController.swift */; };
 		5DD0C76B2621CEBE008C8634 /* MapHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */; };
+		8861ED2B2621D8260059FE81 /* ContainerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */; };
 		8877304C26209D06001B5E25 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8877304B26209D06001B5E25 /* wagon.svg */; };
 		8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877304D2620B828001B5E25 /* TrainMapViewController.swift */; };
 		887730512620B926001B5E25 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730502620B926001B5E25 /* UICollectionView++.swift */; };
@@ -33,14 +33,34 @@
 		88A416F32621BA2E00718953 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A416F22621BA2E00718953 /* NotificationsViewController.swift */; };
 		88A416F52621BCB500718953 /* StationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A416F42621BCB500718953 /* StationMapViewController.swift */; };
 		88A416F72621BCDA00718953 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A416F62621BCDA00718953 /* UserViewController.swift */; };
+		88A4170F2621D5F700718953 /* gilroy-black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417002621D12400718953 /* gilroy-black.ttf */; };
+		88A417102621D5FA00718953 /* gilroy-regularitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A416FF2621D12400718953 /* gilroy-regularitalic.ttf */; };
+		88A417112621D5FA00718953 /* gilroy-ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417012621D12400718953 /* gilroy-ultralight.ttf */; };
+		88A417122621D5FA00718953 /* gilroy-semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A4170A2621D12400718953 /* gilroy-semibold.ttf */; };
+		88A417132621D5FA00718953 /* gilroy-heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A416FE2621D12400718953 /* gilroy-heavy.ttf */; };
+		88A417142621D5FA00718953 /* gilroy-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A4170D2621D12400718953 /* gilroy-medium.ttf */; };
+		88A417152621D5FA00718953 /* gilroy-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417082621D12400718953 /* gilroy-regular.ttf */; };
+		88A417162621D5FA00718953 /* gilroy-extrabolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A4170E2621D12400718953 /* gilroy-extrabolditalic.ttf */; };
+		88A417172621D5FA00718953 /* gilroy-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417042621D12400718953 /* gilroy-bold.ttf */; };
+		88A417182621D5FA00718953 /* gilroy-heavyitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417032621D12400718953 /* gilroy-heavyitalic.ttf */; };
+		88A417192621D5FA00718953 /* gilroy-lightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417062621D12400718953 /* gilroy-lightitalic.ttf */; };
+		88A4171A2621D5FA00718953 /* gilroy-thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417052621D12400718953 /* gilroy-thin.ttf */; };
+		88A4171B2621D5FA00718953 /* gilroy-thinitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417092621D12400718953 /* gilroy-thinitalic.ttf */; };
+		88A4171C2621D5FA00718953 /* gilroy-bolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A4170C2621D12400718953 /* gilroy-bolditalic.ttf */; };
+		88A4171D2621D5FA00718953 /* gilroy-blackitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417072621D12400718953 /* gilroy-blackitalic.ttf */; };
+		88A4171E2621D5FA00718953 /* gilroy-mediumitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A416FD2621D12400718953 /* gilroy-mediumitalic.ttf */; };
+		88A4171F2621D5FA00718953 /* gilroy-ultralightitalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A417022621D12400718953 /* gilroy-ultralightitalic.ttf */; };
+		88A417202621D5FA00718953 /* gilroy-semibolditalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A4170B2621D12400718953 /* gilroy-semibolditalic.ttf */; };
+		88A417222621D61900718953 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A417212621D61900718953 /* Font.swift */; };
+		88A417242621D79C00718953 /* StringStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A417232621D79C00718953 /* StringStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DD0C75D2621C7DF008C8634 /* ContainerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerWrapper.swift; sourceTree = "<group>"; };
 		5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		5DD0C7662621CA05008C8634 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHeaderView.swift; sourceTree = "<group>"; };
+		8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerWrapper.swift; sourceTree = "<group>"; };
 		8877304B26209D06001B5E25 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
 		8877304D2620B828001B5E25 /* TrainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMapViewController.swift; sourceTree = "<group>"; };
 		887730502620B926001B5E25 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
@@ -64,6 +84,26 @@
 		88A416F22621BA2E00718953 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		88A416F42621BCB500718953 /* StationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapViewController.swift; sourceTree = "<group>"; };
 		88A416F62621BCDA00718953 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		88A416FD2621D12400718953 /* gilroy-mediumitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-mediumitalic.ttf"; sourceTree = "<group>"; };
+		88A416FE2621D12400718953 /* gilroy-heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-heavy.ttf"; sourceTree = "<group>"; };
+		88A416FF2621D12400718953 /* gilroy-regularitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-regularitalic.ttf"; sourceTree = "<group>"; };
+		88A417002621D12400718953 /* gilroy-black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-black.ttf"; sourceTree = "<group>"; };
+		88A417012621D12400718953 /* gilroy-ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-ultralight.ttf"; sourceTree = "<group>"; };
+		88A417022621D12400718953 /* gilroy-ultralightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-ultralightitalic.ttf"; sourceTree = "<group>"; };
+		88A417032621D12400718953 /* gilroy-heavyitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-heavyitalic.ttf"; sourceTree = "<group>"; };
+		88A417042621D12400718953 /* gilroy-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-bold.ttf"; sourceTree = "<group>"; };
+		88A417052621D12400718953 /* gilroy-thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-thin.ttf"; sourceTree = "<group>"; };
+		88A417062621D12400718953 /* gilroy-lightitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-lightitalic.ttf"; sourceTree = "<group>"; };
+		88A417072621D12400718953 /* gilroy-blackitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-blackitalic.ttf"; sourceTree = "<group>"; };
+		88A417082621D12400718953 /* gilroy-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-regular.ttf"; sourceTree = "<group>"; };
+		88A417092621D12400718953 /* gilroy-thinitalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-thinitalic.ttf"; sourceTree = "<group>"; };
+		88A4170A2621D12400718953 /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-semibold.ttf"; sourceTree = "<group>"; };
+		88A4170B2621D12400718953 /* gilroy-semibolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-semibolditalic.ttf"; sourceTree = "<group>"; };
+		88A4170C2621D12400718953 /* gilroy-bolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-bolditalic.ttf"; sourceTree = "<group>"; };
+		88A4170D2621D12400718953 /* gilroy-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-medium.ttf"; sourceTree = "<group>"; };
+		88A4170E2621D12400718953 /* gilroy-extrabolditalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gilroy-extrabolditalic.ttf"; sourceTree = "<group>"; };
+		88A417212621D61900718953 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		88A417232621D79C00718953 /* StringStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringStyle.swift; sourceTree = "<group>"; };
 		95FEA99E54D27846D2FD4960 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
 		C75F40D40CF00B9FC7F6A51C /* Pods-Rails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.debug.xcconfig"; path = "Target Support Files/Pods-Rails/Pods-Rails.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,8 +140,8 @@
 		5DD0C75C2621C7D1008C8634 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5DD0C75D2621C7DF008C8634 /* ContainerWrapper.swift */,
 				5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */,
+				8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */,
 				5DD0C7662621CA05008C8634 /* TabBarViewController.swift */,
 			);
 			path = Utils;
@@ -129,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				8877305D2620C7DC001B5E25 /* ColorPalette.swift */,
+				88A417232621D79C00718953 /* StringStyle.swift */,
+				88A417212621D61900718953 /* Font.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -136,6 +178,7 @@
 		887730572620C6D7001B5E25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88A416FC2621D11B00718953 /* Fonts */,
 				8877304A26209CF7001B5E25 /* SVG */,
 				888A0F6726207BAB00F16A48 /* Assets.xcassets */,
 				888A0F6926207BAB00F16A48 /* LaunchScreen.storyboard */,
@@ -268,6 +311,31 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		88A416FC2621D11B00718953 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				88A417002621D12400718953 /* gilroy-black.ttf */,
+				88A417072621D12400718953 /* gilroy-blackitalic.ttf */,
+				88A417042621D12400718953 /* gilroy-bold.ttf */,
+				88A4170C2621D12400718953 /* gilroy-bolditalic.ttf */,
+				88A4170E2621D12400718953 /* gilroy-extrabolditalic.ttf */,
+				88A416FE2621D12400718953 /* gilroy-heavy.ttf */,
+				88A417032621D12400718953 /* gilroy-heavyitalic.ttf */,
+				88A417062621D12400718953 /* gilroy-lightitalic.ttf */,
+				88A4170D2621D12400718953 /* gilroy-medium.ttf */,
+				88A416FD2621D12400718953 /* gilroy-mediumitalic.ttf */,
+				88A417082621D12400718953 /* gilroy-regular.ttf */,
+				88A416FF2621D12400718953 /* gilroy-regularitalic.ttf */,
+				88A4170A2621D12400718953 /* gilroy-semibold.ttf */,
+				88A4170B2621D12400718953 /* gilroy-semibolditalic.ttf */,
+				88A417052621D12400718953 /* gilroy-thin.ttf */,
+				88A417092621D12400718953 /* gilroy-thinitalic.ttf */,
+				88A417012621D12400718953 /* gilroy-ultralight.ttf */,
+				88A417022621D12400718953 /* gilroy-ultralightitalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,9 +395,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A417182621D5FA00718953 /* gilroy-heavyitalic.ttf in Resources */,
+				88A4171A2621D5FA00718953 /* gilroy-thin.ttf in Resources */,
+				88A4171D2621D5FA00718953 /* gilroy-blackitalic.ttf in Resources */,
+				88A417162621D5FA00718953 /* gilroy-extrabolditalic.ttf in Resources */,
+				88A4171F2621D5FA00718953 /* gilroy-ultralightitalic.ttf in Resources */,
+				88A417102621D5FA00718953 /* gilroy-regularitalic.ttf in Resources */,
+				88A417202621D5FA00718953 /* gilroy-semibolditalic.ttf in Resources */,
+				88A4171E2621D5FA00718953 /* gilroy-mediumitalic.ttf in Resources */,
+				88A4171C2621D5FA00718953 /* gilroy-bolditalic.ttf in Resources */,
+				88A4170F2621D5F700718953 /* gilroy-black.ttf in Resources */,
+				88A417122621D5FA00718953 /* gilroy-semibold.ttf in Resources */,
 				888A0F6B26207BAB00F16A48 /* LaunchScreen.storyboard in Resources */,
+				88A417132621D5FA00718953 /* gilroy-heavy.ttf in Resources */,
+				88A417192621D5FA00718953 /* gilroy-lightitalic.ttf in Resources */,
 				888A0F6826207BAB00F16A48 /* Assets.xcassets in Resources */,
+				88A417172621D5FA00718953 /* gilroy-bold.ttf in Resources */,
+				88A417112621D5FA00718953 /* gilroy-ultralight.ttf in Resources */,
 				8877304C26209D06001B5E25 /* wagon.svg in Resources */,
+				88A4171B2621D5FA00718953 /* gilroy-thinitalic.ttf in Resources */,
+				88A417142621D5FA00718953 /* gilroy-medium.ttf in Resources */,
+				88A417152621D5FA00718953 /* gilroy-regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +472,7 @@
 				8877305E2620C7DC001B5E25 /* ColorPalette.swift in Sources */,
 				88A416F72621BCDA00718953 /* UserViewController.swift in Sources */,
 				5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */,
+				88A417222621D61900718953 /* Font.swift in Sources */,
 				8877306E26210555001B5E25 /* ChidoriPresentationController.swift in Sources */,
 				88A416F52621BCB500718953 /* StationMapViewController.swift in Sources */,
 				8877306A26210523001B5E25 /* ChidoriMenu.swift in Sources */,
@@ -397,11 +484,12 @@
 				8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */,
 				8877306C2621053C001B5E25 /* ChidoriMenuTableViewCell.swift in Sources */,
 				88A416F12621B9FD00718953 /* MainViewController.swift in Sources */,
+				8861ED2B2621D8260059FE81 /* ContainerWrapper.swift in Sources */,
 				887730512620B926001B5E25 /* UICollectionView++.swift in Sources */,
 				887730602620C941001B5E25 /* UIColor++.swift in Sources */,
 				887730552620B97B001B5E25 /* WagonView.swift in Sources */,
-				5DD0C75E2621C7DF008C8634 /* ContainerWrapper.swift in Sources */,
 				88A416EB26211D8D00718953 /* UserLocationView.swift in Sources */,
+				88A417242621D79C00718953 /* StringStyle.swift in Sources */,
 				888A0F6126207BA900F16A48 /* SceneDelegate.swift in Sources */,
 				88A416F32621BA2E00718953 /* NotificationsViewController.swift in Sources */,
 			);
