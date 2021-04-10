@@ -57,6 +57,7 @@ final class TrainMapViewController: UIViewController {
 
         self.view.addSubview(self.collectionView)
         self.collectionView.edgesToSuperview()
+        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
     }
 }
 
@@ -96,7 +97,9 @@ extension TrainMapViewController: UICollectionViewDataSource {
     private func onLongTap(recognizer: UILongPressGestureRecognizer) {
         guard recognizer.state == .began else { return }
         let point = recognizer.location(in: self.view)
-        let chidoriMenu = ChidoriMenu(menu: self.contextMenu, summonPoint: point)
+        let adjustedPoint = self.navigationController!.view.convert(point, from: self.view)
+
+        let chidoriMenu = ChidoriMenu(menu: self.contextMenu, summonPoint: adjustedPoint)
         self.present(chidoriMenu, animated: true, completion: nil)
     }
 }
@@ -122,6 +125,6 @@ extension TrainMapViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
-        UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 32)
+        UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 }

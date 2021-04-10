@@ -23,7 +23,21 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setup()
+        
+        // For test
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let vc = TrainMapViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 
+    // MARK: - Private
+    private let greetingView: GreetingView
+    private let searchForm: SearchForm
+    private let scrollView: AutoKeyboardScrollView
+
+    private func setup() {
         self.view.backgroundColor = .white
         self.view.addSubview(self.scrollView)
         self.scrollView.edgesToSuperview(usingSafeArea: true)
@@ -58,10 +72,4 @@ final class MainViewController: UIViewController {
         ticketContainerView.edgesToSuperview(excluding: .top, usingSafeArea: true)
         ticketContainerView.topToBottom(of: self.searchForm, offset: 46)
     }
-
-    // MARK: - Private
-    private let greetingView: GreetingView
-    private let searchForm: SearchForm
-    private let scrollView: AutoKeyboardScrollView
-    
 }
