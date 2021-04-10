@@ -8,23 +8,17 @@
 import UIKit
 import TinyConstraints
 
-protocol TrainPart {
-
-}
-
-struct Wagon: TrainPart {
-
-}
-
-struct Vestibule: TrainPart {
-
-}
+protocol TrainPart {}
+struct Wagon: TrainPart {}
+struct Vestibule: TrainPart {}
+struct Toilet: TrainPart {}
 
 final class TrainMapViewController: UIViewController {
     private let collectionView: UICollectionView
     private let collectionViewFlowLayout: UICollectionViewFlowLayout
     private let trainParts: [TrainPart] = {
-        var array: [TrainPart] = [TrainPart](repeatingValues: [Wagon(), Vestibule()], count: 7)
+        var array: [TrainPart] = [Toilet()]
+        array += [TrainPart](repeatingValues: [Wagon(), Vestibule()], count: 7)
         array.append(Wagon())
         return array
     }()
@@ -70,8 +64,10 @@ final class TrainMapViewController: UIViewController {
 
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+
         self.collectionView.register(WagonCell.self)
         self.collectionView.register(VestibuleCell.self)
+        self.collectionView.register(ToiletCell.self)
 
         self.collectionView.backgroundColor = .white
 
@@ -93,7 +89,7 @@ extension TrainMapViewController: UICollectionViewDataSource {
         let trainPart = self.trainParts[indexPath.item]
 
         switch trainPart {
-            case let wagon as Wagon:
+            case is Wagon:
                 let cell: WagonCell = collectionView.dequeueReusableCell(for: indexPath)
 
                 cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }
@@ -102,15 +98,18 @@ extension TrainMapViewController: UICollectionViewDataSource {
                 cell.addGestureRecognizer(longTapGestureRecognizer)
 
                 // For test
-                if indexPath.item == 0 {
-                    cell.userLocation = CGPoint(x: 210, y: 320)
+                if indexPath.item == 1 {
+                    cell.userLocation = CGPoint(x: 190, y: 250)
                 } else {
                     cell.userLocation = nil
                 }
 
                 return cell
-            case let vestibule as Vestibule:
+            case is Vestibule:
                 let cell: VestibuleCell = collectionView.dequeueReusableCell(for: indexPath)
+                return cell
+            case is Toilet:
+                let cell: ToiletCell = collectionView.dequeueReusableCell(for: indexPath)
                 return cell
             default:
                 fatalError("Sorry.")
@@ -145,12 +144,17 @@ extension TrainMapViewController: UICollectionViewDelegateFlowLayout {
             case is Wagon:
                 return CGSize(
                     width: width,
-                    height: (width - 32) * 3.645
+                    height: (width - 100) * 3.645
                 )
             case is Vestibule:
                 return CGSize(
                     width: width,
                     height: width * 0.41
+                )
+            case is Toilet:
+                return CGSize(
+                    width: width,
+                    height: (width - 32) * 0.144
                 )
             default:
                 assertionFailure()
@@ -163,7 +167,7 @@ extension TrainMapViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
-        .zero
+        UIEdgeInsets(top: 32, left: 0, bottom: 0, right: 0)
     }
 }
 

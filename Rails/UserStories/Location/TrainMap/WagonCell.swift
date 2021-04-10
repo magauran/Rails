@@ -46,7 +46,7 @@ final class WagonCell: UICollectionViewCell {
 
     private func setup() {
         self.contentView.addSubview(self.view)
-        self.view.edgesToSuperview(insets: .horizontal(16))
+        self.view.edgesToSuperview(insets: .horizontal(50))
         self.contentView.addSubview(self.userLocationView)
 
         self.userLocationView.isHidden = true
