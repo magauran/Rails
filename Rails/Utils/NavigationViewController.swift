@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+final class NavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +18,11 @@ class NavigationViewController: UINavigationController {
 
     func background(isWhite:Bool) {
         if isWhite {
-            self.navigationBar.barTintColor = AppColors.viewBackgroundColor.color
-            self.navigationBar.backgroundColor = AppColors.viewBackgroundColor.color
+            self.navigationBar.barTintColor = Palette.viewBGColor
+            self.navigationBar.backgroundColor = Palette.viewBGColor
         } else {
-            self.navigationBar.barTintColor = AppColors.greyBackgroundColor.color
-            self.navigationBar.backgroundColor = AppColors.greyBackgroundColor.color
+            self.navigationBar.barTintColor = Palette.greyBackgroundColor
+            self.navigationBar.backgroundColor = Palette.greyBackgroundColor
         }
     }
     
@@ -30,14 +30,14 @@ class NavigationViewController: UINavigationController {
     private func updateColor() {
         self.setNeedsStatusBarAppearanceUpdate()
         
-        self.navigationBar.barTintColor = AppColors.viewBackgroundColor.color
-        self.navigationBar.backgroundColor = AppColors.viewBackgroundColor.color
-        self.navigationBar.tintColor = AppColors.grayishBlackColor.color
+        self.navigationBar.barTintColor = Palette.viewBGColor
+        self.navigationBar.backgroundColor = Palette.viewBGColor
+        self.navigationBar.tintColor = Palette.grayishBlackColor
         
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.font :
                                                     UIFont.systemFont(ofSize: 22,
                                                                       weight: UIFont.Weight.medium),
-                                             NSAttributedString.Key.foregroundColor : UIColor(rgb: 0x383838)]
+                                                  NSAttributedString.Key.foregroundColor : Palette.textColor]
         
         self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationBar.shadowImage = UIImage()
@@ -46,7 +46,6 @@ class NavigationViewController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
-    
     
     override func popToRootViewController(animated: Bool) -> [UIViewController]? {
         self.tabBarController?.tabBar.isHidden = false

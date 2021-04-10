@@ -10,8 +10,8 @@
 		12AF346CAF823A23AEDBB83C /* Pods_Rails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */; };
 		5DD0C75E2621C7DF008C8634 /* ContainerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C75D2621C7DF008C8634 /* ContainerWrapper.swift */; };
 		5DD0C7612621C8B9008C8634 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */; };
-		5DD0C7642621C937008C8634 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7632621C937008C8634 /* AppColors.swift */; };
 		5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C7662621CA05008C8634 /* TabBarViewController.swift */; };
+		5DD0C76B2621CEBE008C8634 /* MapHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */; };
 		8877304C26209D06001B5E25 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8877304B26209D06001B5E25 /* wagon.svg */; };
 		8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877304D2620B828001B5E25 /* TrainMapViewController.swift */; };
 		887730512620B926001B5E25 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730502620B926001B5E25 /* UICollectionView++.swift */; };
@@ -39,8 +39,8 @@
 		20590D0D0DCFED92477A5E94 /* Pods_Rails.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rails.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD0C75D2621C7DF008C8634 /* ContainerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerWrapper.swift; sourceTree = "<group>"; };
 		5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		5DD0C7632621C937008C8634 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		5DD0C7662621CA05008C8634 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHeaderView.swift; sourceTree = "<group>"; };
 		8877304B26209D06001B5E25 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
 		8877304D2620B828001B5E25 /* TrainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMapViewController.swift; sourceTree = "<group>"; };
 		887730502620B926001B5E25 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
@@ -102,7 +102,6 @@
 			children = (
 				5DD0C75D2621C7DF008C8634 /* ContainerWrapper.swift */,
 				5DD0C7602621C8B9008C8634 /* NavigationViewController.swift */,
-				5DD0C7632621C937008C8634 /* AppColors.swift */,
 				5DD0C7662621CA05008C8634 /* TabBarViewController.swift */,
 			);
 			path = Utils;
@@ -180,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				88A416F42621BCB500718953 /* StationMapViewController.swift */,
+				5DD0C76A2621CEBE008C8634 /* MapHeaderView.swift */,
 			);
 			path = StationMap;
 			sourceTree = "<group>";
@@ -382,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DD0C76B2621CEBE008C8634 /* MapHeaderView.swift in Sources */,
 				8877305E2620C7DC001B5E25 /* ColorPalette.swift in Sources */,
 				88A416F72621BCDA00718953 /* UserViewController.swift in Sources */,
 				5DD0C7672621CA05008C8634 /* TabBarViewController.swift in Sources */,
@@ -401,7 +402,6 @@
 				887730552620B97B001B5E25 /* WagonView.swift in Sources */,
 				5DD0C75E2621C7DF008C8634 /* ContainerWrapper.swift in Sources */,
 				88A416EB26211D8D00718953 /* UserLocationView.swift in Sources */,
-				5DD0C7642621C937008C8634 /* AppColors.swift in Sources */,
 				888A0F6126207BA900F16A48 /* SceneDelegate.swift in Sources */,
 				88A416F32621BA2E00718953 /* NotificationsViewController.swift in Sources */,
 			);

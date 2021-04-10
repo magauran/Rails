@@ -18,17 +18,33 @@ final class StationMapViewController: UIViewController {
         return map
     }()
     
+    private let headerView: MapHeaderView = {
+        let header = MapHeaderView(frame: CGRect.zero,
+                                   title: "Some train #---- with acquisition 34B",
+                                   description: "here comes some description along the way")
+        /*add customization here*/
+        header.translatesAutoresizingMaskIntoConstraints = false
+        
+        return header
+    }()
+    
+    public lazy var stackView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [self.headerView, self.mapView])
+        stack.alignment = .fill
+        stack.axis = .vertical
+        stack.distribution = .fill
+        stack.spacing = 0
+        return stack
+    }()
+    
     override func loadView() {
         super.loadView()
-        self.view = self.mapView
+        
+        self.stackView.frame = self.view.frame
+        self.view = self.stackView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    private func setupViews() {
-        
-    }
-
 }
