@@ -27,7 +27,21 @@ final class SearchForm: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.shadowPath = CGPath(
+            roundedRect: self.bounds,
+            cornerWidth: Style.cornerRadius,
+            cornerHeight: Style.cornerRadius,
+            transform: nil
+        )
+    }
+
     // MARK: - Private
+    private enum Style {
+        static let cornerRadius: CGFloat = 13.0
+    }
+
     private let titleLabel: UILabel
     private let fromTextField: SkyFloatingLabelTextField
     private let toTextField: SkyFloatingLabelTextField
@@ -35,6 +49,11 @@ final class SearchForm: UIView {
     private let searchButton: UIButton
 
     private func setup() {
+        self.setupShadow()
+        self.layer.cornerRadius = Style.cornerRadius
+        self.layer.cornerCurve = .continuous
+        self.backgroundColor = .white
+
         let contentStackView = UIStackView()
         contentStackView.axis = .vertical
         contentStackView.spacing = 20
@@ -42,6 +61,7 @@ final class SearchForm: UIView {
         contentStackView.addArrangedSubview(self.titleLabel)
         contentStackView.addArrangedSubview(self.fromTextField)
         contentStackView.addArrangedSubview(self.toTextField)
+        contentStackView.setCustomSpacing(30, after: self.toTextField)
 
         let footerStackView = UIStackView(arrangedSubviews: [
             self.forwardDateView,
@@ -53,6 +73,14 @@ final class SearchForm: UIView {
 
         self.addSubview(contentStackView)
         contentStackView.edgesToSuperview(insets: .uniform(24))
+    }
+
+    private func setupShadow() {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor(red: 0.125, green: 0.125, blue: 0.125, alpha: 0.06).cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 20
     }
 
     private static func makeTitleLabel() -> UILabel {

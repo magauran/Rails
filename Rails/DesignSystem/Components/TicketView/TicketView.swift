@@ -70,8 +70,6 @@ final class TicketView: UIView {
 
         self.addSubview(stackView)
         stackView.edgesToSuperview(insets: .init(top: 18, left: 24, bottom: 18, right: 24))
-
-        self.clipsToBounds = false
     }
 
     private func setupShadow() {
