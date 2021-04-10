@@ -56,7 +56,7 @@ final class MainViewController: UIViewController {
 
         contentView.addSubview(ticketContainerView)
         ticketContainerView.edgesToSuperview(excluding: .top, usingSafeArea: true)
-        ticketContainerView.topToBottom(of: self.searchForm, offset: 44)
+        ticketContainerView.topToBottom(of: self.searchForm, offset: 46)
     }
 
     // MARK: - Private

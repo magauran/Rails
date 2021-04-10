@@ -40,8 +40,8 @@ final class ForwardDateView: UIView {
         bottomRightStackView.distribution = .fillEqually
 
         let bottomStackView = UIStackView(arrangedSubviews: [
-            self.dayLabel.wrapped(with: .init(top: 10, left: 0, bottom: 0, right: 0)),
-            bottomRightStackView.wrapped(with: .init(top: 6, left: 0, bottom: 4, right: 0)),
+            self.dayLabel.wrapped(with: .init(top: 4, left: 0, bottom: 0, right: 0)),
+            bottomRightStackView.wrapped(with: .init(top: 0, left: 0, bottom: 4, right: 0)),
         ])
         bottomStackView.axis = .horizontal
         bottomStackView.spacing = 8
