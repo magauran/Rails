@@ -37,7 +37,7 @@ final class NavigationViewController: UINavigationController {
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.font :
                                                     UIFont.systemFont(ofSize: 22,
                                                                       weight: UIFont.Weight.medium),
-                                                  NSAttributedString.Key.foregroundColor : Palette.textColor]
+                                                  NSAttributedString.Key.foregroundColor : Palette.Text.primary]
         
         self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationBar.shadowImage = UIImage()
