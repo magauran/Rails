@@ -35,8 +35,7 @@ final class NavigationViewController: UINavigationController {
         self.navigationBar.tintColor = Palette.grayishBlackColor
         
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.font :
-                                                    UIFont.systemFont(ofSize: 22,
-                                                                      weight: UIFont.Weight.medium),
+                                                    Font.semiBold(22),
                                                   NSAttributedString.Key.foregroundColor : Palette.Text.primary]
         
         self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -50,6 +49,13 @@ final class NavigationViewController: UINavigationController {
     override func popToRootViewController(animated: Bool) -> [UIViewController]? {
         self.tabBarController?.tabBar.isHidden = false
         return super.popToRootViewController(animated: animated)
+    }
+    
+    public func setNavbarTransculent() {
+        self.isNavigationBarHidden = false
+        self.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationBar.backgroundColor = UIColor.clear
+        self.navigationBar.isTranslucent = true
     }
     
     deinit {
