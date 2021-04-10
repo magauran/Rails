@@ -44,20 +44,18 @@ final class UserLocationView: UIView {
     }
 
     private enum Layout {
-        static let size = CGSize(width: 24, height: 24)
+        static let size = CGSize(width: 16, height: 16)
     }
 
     private func setup() {
-        self.pulsator.numPulse = 7
+        self.pulsator.numPulse = 4
         self.pulsator.animationDuration = 5
-        self.pulsator.radius = 50
-        self.pulsator.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.5).cgColor
+        self.pulsator.radius = 35
+        self.pulsator.backgroundColor = UIColor(rgb: 0x7E8074).withAlphaComponent(0.7).cgColor
         self.layer.addSublayer(self.pulsator)
         self.clipsToBounds = false
 
         self.addSubview(self.circle)
-        self.circle.backgroundColor = UIColor.systemBlue
-        self.circle.layer.borderWidth = 3
-        self.circle.layer.borderColor = UIColor.white.cgColor
+        self.circle.backgroundColor = UIColor(rgb: 0x7E8074)
     }
 }
