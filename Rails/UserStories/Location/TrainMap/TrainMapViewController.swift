@@ -26,17 +26,16 @@ final class TrainMapViewController: UIViewController {
     private lazy var contextMenu: UIMenu = {
         var postActions: [UIMenuElement] = []
 
-        let ident1 = UIAction.Identifier("upvote")
-        let upvoteAction = UIAction(title: "Upvote", image: UIImage(systemName: "arrow.up"), identifier: ident1, handler: { _ in })
+        let ident1 = UIAction.Identifier("report")
+        let upvoteAction = UIAction(title: "Report the incident", image: nil, identifier: ident1, handler: { _ in })
         postActions.append(upvoteAction)
 
         let ident2 = UIAction.Identifier("downvote")
-        let downvoteAction = UIAction(title: "Downvote", image: UIImage(systemName: "arrow.down"), identifier: ident2, handler: { _ in })
+        let downvoteAction = UIAction(title: "Need help", image: nil, identifier: ident2, handler: { _ in })
         postActions.append(downvoteAction)
 
         let ident3 = UIAction.Identifier("save")
-//        actionMappings[ident3] = save(action:)
-        let saveAction = UIAction(title: "Save", image: UIImage(systemName: "bookmark"), identifier: ident3, handler: { _ in })
+        let saveAction = UIAction(title: "Lost things", image: nil, identifier: ident3, handler: { _ in })
         postActions.append(saveAction)
 
         return UIMenu(title: "", image: nil, identifier: nil, options: [.displayInline], children: postActions)
@@ -97,6 +96,7 @@ extension TrainMapViewController: UICollectionViewDataSource {
             case is Wagon:
                 let cell: WagonCell = collectionView.dequeueReusableCell(for: indexPath)
 
+                // TODO: Move to collection view
                 cell.gestureRecognizers?.forEach { cell.removeGestureRecognizer($0) }
                 let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongTap))
                 longTapGestureRecognizer.minimumPressDuration = 0.5
