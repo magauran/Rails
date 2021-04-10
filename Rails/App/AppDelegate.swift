@@ -11,6 +11,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge], completionHandler: { _, _ in })
+        NotificationRegistrar.register()
+
         return true
     }
     
