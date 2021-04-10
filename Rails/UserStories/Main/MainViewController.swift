@@ -9,6 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
     init() {
+        self.scrollView = AutoKeyboardScrollView()
         self.greetingView = GreetingView()
         self.searchForm = SearchForm()
 
@@ -24,29 +25,43 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .white
+        self.view.addSubview(self.scrollView)
+        self.scrollView.edgesToSuperview(usingSafeArea: true)
+        self.scrollView.handleTextFields(self.searchForm.textFields)
+        self.scrollView.keyboardDismissMode = .onDrag
 
+        let contentView = UIView()
+        self.scrollView.addSubview(contentView)
+        contentView.edgesToSuperview()
+        contentView.widthToSuperview()
 
-        self.view.addSubview(self.greetingView)
+        contentView.addSubview(self.greetingView)
         self.greetingView.edgesToSuperview(
             excluding: .bottom,
             insets: .init(top: 0, left: 45, bottom: .nan, right: 45)
         )
 
-        self.view.addSubview(self.searchForm)
+        contentView.addSubview(self.searchForm)
         self.searchForm.topToBottom(of: self.greetingView, offset: 20)
         self.searchForm.horizontalToSuperview(insets: .horizontal(21))
 
-        // For test
         let ticketView = TicketView()
-        self.view.addSubview(ticketView)
 
         ticketView.height(140)
-        ticketView.width(320)
-        ticketView.center(in: self.view, offset: .init(x: 0, y: 100))
+
+        let ticketContainerView = UIView()
+        ticketContainerView.backgroundColor = UIColor(rgb: 0xB5B7C2, alpha: 0.2)
+        ticketContainerView.addSubview(ticketView)
+        ticketView.edgesToSuperview(insets: .init(top: 28, left: 28, bottom: 28, right: 28))
+
+        contentView.addSubview(ticketContainerView)
+        ticketContainerView.edgesToSuperview(excluding: .top, usingSafeArea: true)
+        ticketContainerView.topToBottom(of: self.searchForm, offset: 44)
     }
 
     // MARK: - Private
     private let greetingView: GreetingView
     private let searchForm: SearchForm
+    private let scrollView: AutoKeyboardScrollView
     
 }

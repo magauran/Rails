@@ -18,6 +18,7 @@
 		8861ED342621EF980059FE81 /* SearchForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED332621EF980059FE81 /* SearchForm.swift */; };
 		8861ED372621FDA70059FE81 /* VerticalAlignmentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */; };
 		8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED38262200230059FE81 /* ForwardDateView.swift */; };
+		8861ED3B26220DA30059FE81 /* AutoKeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861ED3A26220DA30059FE81 /* AutoKeyboardScrollView.swift */; };
 		8877304C26209D06001B5E25 /* wagon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8877304B26209D06001B5E25 /* wagon.svg */; };
 		8877304E2620B828001B5E25 /* TrainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8877304D2620B828001B5E25 /* TrainMapViewController.swift */; };
 		887730512620B926001B5E25 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887730502620B926001B5E25 /* UICollectionView++.swift */; };
@@ -74,6 +75,7 @@
 		8861ED332621EF980059FE81 /* SearchForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForm.swift; sourceTree = "<group>"; };
 		8861ED362621FDA70059FE81 /* VerticalAlignmentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignmentLabel.swift; sourceTree = "<group>"; };
 		8861ED38262200230059FE81 /* ForwardDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardDateView.swift; sourceTree = "<group>"; };
+		8861ED3A26220DA30059FE81 /* AutoKeyboardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoKeyboardScrollView.swift; sourceTree = "<group>"; };
 		8877304B26209D06001B5E25 /* wagon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wagon.svg; sourceTree = "<group>"; };
 		8877304D2620B828001B5E25 /* TrainMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMapViewController.swift; sourceTree = "<group>"; };
 		887730502620B926001B5E25 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				8861ED2A2621D8260059FE81 /* ContainerWrapper.swift */,
 				88A417232621D79C00718953 /* StringStyle.swift */,
 				5DD0C7662621CA05008C8634 /* TabBarViewController.swift */,
+				8861ED3A26220DA30059FE81 /* AutoKeyboardScrollView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				88A416F52621BCB500718953 /* StationMapViewController.swift in Sources */,
 				8861ED2E2621DF2C0059FE81 /* DateTimeView.swift in Sources */,
 				8877306A26210523001B5E25 /* ChidoriMenu.swift in Sources */,
+				8861ED3B26220DA30059FE81 /* AutoKeyboardScrollView.swift in Sources */,
 				887730622620C9BF001B5E25 /* Macaw.Color++.swift in Sources */,
 				887730532620B95A001B5E25 /* WagonCell.swift in Sources */,
 				8861ED39262200230059FE81 /* ForwardDateView.swift in Sources */,

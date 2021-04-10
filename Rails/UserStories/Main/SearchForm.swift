@@ -10,6 +10,10 @@ import TinyConstraints
 import SkyFloatingLabelTextField
 
 final class SearchForm: UIView {
+    var textFields: [UITextField] {
+        [self.fromTextField, self.toTextField]
+    }
+
     init() {
         self.titleLabel = Self.makeTitleLabel()
         self.fromTextField = Self.makeFromTextField()
@@ -104,12 +108,14 @@ final class SearchForm: UIView {
 
     private static func makeTextField(text: String) -> SkyFloatingLabelTextField {
         let textField = SkyFloatingLabelTextField()
-        textField.placeholder = text
+        let placeholderStyle = StringStyle {
+            $0.color = Palette.Text.placeholder
+            $0.font = Font.regular(15)
+        }
+        textField.attributedPlaceholder = text.set(style: placeholderStyle)
         textField.lineColor = Palette.TextField.lineColor
         textField.selectedLineColor = Palette.TextField.selectedLineColor
         textField.lineHeight = 2
-        textField.placeholderColor = Palette.Text.placeholder
-        textField.placeholderFont = Font.regular(15)
         textField.selectedTitleColor = Palette.TextField.selectedTitleColor
         textField.titleFormatter = { $0 }
         textField.titleFont = Font.regular(15)
