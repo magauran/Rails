@@ -30,7 +30,7 @@ enum Palette {
 
     enum TabBar {
         static let normalIcon = UIColor(rgb: 0xB1B4BF)
-        static let selectedIcon = UIColor(rgb: 0x031672)
+        static let selectedIcon = UIColor(rgb: 0xC00733)
     }
 
     enum TextField {
