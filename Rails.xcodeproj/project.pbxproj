@@ -24,6 +24,7 @@
 		888A0F6126207BA900F16A48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A0F6026207BA900F16A48 /* SceneDelegate.swift */; };
 		888A0F6826207BAB00F16A48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888A0F6726207BAB00F16A48 /* Assets.xcassets */; };
 		888A0F6B26207BAB00F16A48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888A0F6926207BAB00F16A48 /* LaunchScreen.storyboard */; };
+		88A416EB26211D8D00718953 /* UserLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A416EA26211D8D00718953 /* UserLocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		888A0F6726207BAB00F16A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		888A0F6A26207BAB00F16A48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888A0F6C26207BAB00F16A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88A416EA26211D8D00718953 /* UserLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationView.swift; sourceTree = "<group>"; };
 		95FEA99E54D27846D2FD4960 /* Pods-Rails.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.release.xcconfig"; path = "Target Support Files/Pods-Rails/Pods-Rails.release.xcconfig"; sourceTree = "<group>"; };
 		C75F40D40CF00B9FC7F6A51C /* Pods-Rails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rails.debug.xcconfig"; path = "Target Support Files/Pods-Rails/Pods-Rails.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				887730522620B95A001B5E25 /* WagonCell.swift */,
+				88A416EA26211D8D00718953 /* UserLocationView.swift */,
 				887730542620B97B001B5E25 /* WagonView.swift */,
 				8877304D2620B828001B5E25 /* TrainMapViewController.swift */,
 			);
@@ -327,6 +330,7 @@
 				887730512620B926001B5E25 /* UICollectionView++.swift in Sources */,
 				887730602620C941001B5E25 /* UIColor++.swift in Sources */,
 				887730552620B97B001B5E25 /* WagonView.swift in Sources */,
+				88A416EB26211D8D00718953 /* UserLocationView.swift in Sources */,
 				888A0F6126207BA900F16A48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

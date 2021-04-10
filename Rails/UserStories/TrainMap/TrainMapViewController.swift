@@ -81,13 +81,20 @@ extension TrainMapViewController: UICollectionViewDataSource {
         let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongTap))
         longTapGestureRecognizer.minimumPressDuration = 0.5
         cell.addGestureRecognizer(longTapGestureRecognizer)
+
+        // For test
+        if indexPath.item == 0 {
+            cell.userLocation = CGPoint(x: 210, y: 320)
+        } else {
+            cell.userLocation = nil
+        }
+
         return cell
     }
 
     @objc
     private func onLongTap(recognizer: UILongPressGestureRecognizer) {
         guard recognizer.state == .began else { return }
-        print("long press")
         let point = recognizer.location(in: self.view)
         let chidoriMenu = ChidoriMenu(menu: self.contextMenu, summonPoint: point)
         self.present(chidoriMenu, animated: true, completion: nil)

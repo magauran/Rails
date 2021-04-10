@@ -6,6 +6,7 @@ inhibit_all_warnings!
 target 'Rails' do
   pod "Macaw", :git => 'https://github.com/magauran/Macaw.git', :branch => 'master'
   pod "TinyConstraints", "4.0.1"
+  pod "Pulsator", :git => 'https://github.com/shu223/Pulsator', :tag => '0.6.3'
 end
 
 post_install do |installer|
