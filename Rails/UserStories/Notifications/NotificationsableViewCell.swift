@@ -20,13 +20,14 @@ class NotificationsableViewCell: UITableViewCell {
     @IBOutlet weak var skipBtn: UIButton!
     @IBOutlet weak var dotsBtn: UIButton!
     @IBOutlet weak var mainView: UIView!
-    
+    @IBOutlet private var stackView: UIStackView!
+
     var data: NotificationModel! {
         didSet {
-            self.titleLabel.text = data.title
-            self.descLabel.text = data.desc
+            self.titleLabel.styledText = data.title
+            self.descLabel.styledText = data.desc
             self.skipBtn.superview?.isHidden = !data.canEdit
-            self.mainView.backgroundColor = data.canEdit ? Palette.Button.primary.withAlphaComponent(0.35) : Palette.viewBGColor
+            self.mainView.backgroundColor = data.canEdit ? UIColor(rgb: 0xC00733, alpha: 0.05) : Palette.viewBGColor
         }
     }
     
@@ -40,22 +41,27 @@ class NotificationsableViewCell: UITableViewCell {
         }
         
         self.descLabel.style = StringStyle {
-            $0.font = Font.semiBold(15)
+            $0.font = Font.regular(15)
             $0.color = Palette.Text.primary
         }
-        
-        self.changeBtn.backgroundColor = Palette.Button.primary
+
+        self.changeBtn.titleLabel?.font = Font.semiBold(13)
+        self.changeBtn.setBackgroundImage(Palette.Button.primary.image(), for: .normal)
+        self.changeBtn.layer.cornerRadius = 6
+        self.changeBtn.layer.cornerCurve = .continuous
+        self.changeBtn.clipsToBounds = true
         self.changeBtn.setTitleColor(UIColor.white, for: .normal)
+        self.skipBtn.titleLabel?.font = Font.semiBold(13)
         self.skipBtn.setTitleColor(Palette.Button.primary, for: UIControl.State.normal)
-        self.mainView.backgroundColor = data.canEdit ? Palette.Button.primary.withAlphaComponent(0.35) : Palette.viewBGColor
+        self.stackView.setCustomSpacing(10, after: self.descLabel)
+        self.selectionStyle = .none
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         self.mainView.layer.cornerRadius = 8
     }
-    
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         self.skipBtn?.superview?.isHidden = true

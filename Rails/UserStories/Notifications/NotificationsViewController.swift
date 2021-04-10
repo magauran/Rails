@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TinyConstraints
 
 fileprivate let cellid = "\(NotificationsableViewCell.self)"
 
@@ -52,12 +53,9 @@ final class NotificationsViewController: UIViewController {
         
         self.view.addSubview(self.tableView)
         
-        NSLayoutConstraint.activate([
-            self.tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            self.tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-            self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-        ])
+        self.tableView.edgesToSuperview(usingSafeArea: true)
+        self.tableView.contentInsetAdjustmentBehavior = .never
+        self.tableView.tableHeaderView = UIView(frame: .init(x: 0, y: 0, width: self.tableView.frame.width, height: CGFloat.leastNormalMagnitude))
         
         self.view.backgroundColor = Palette.viewBGColor.color
         

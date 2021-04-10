@@ -131,7 +131,7 @@ final class SearchForm: UIView {
         button.setTitle("Search", for: .normal)
         let backgroundImage = Palette.Button.primary.image()
         button.setBackgroundImage(backgroundImage, for: .normal)
-        button.titleLabel?.font = Font.semiBold(13)
+        button.titleLabel?.font = Font.semiBold(16)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 6
