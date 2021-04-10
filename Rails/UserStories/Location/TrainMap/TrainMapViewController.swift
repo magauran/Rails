@@ -73,7 +73,12 @@ final class TrainMapViewController: UIViewController {
 
         self.view.addSubview(self.collectionView)
         self.collectionView.edgesToSuperview()
-        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+        self.collectionView.contentInset = UIEdgeInsets(top: 32, left: 0, bottom: 100 + 16, right: 0)
+
+        let ticketView = TicketView()
+        ticketView.needsHideTimePeriod = true
+        self.view.addSubview(ticketView)
+        ticketView.edgesToSuperview(excluding: .top, insets: .init(top: .nan, left: 27, bottom: 27, right: 27), usingSafeArea: true)
     }
 }
 
@@ -167,7 +172,7 @@ extension TrainMapViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
-        UIEdgeInsets(top: 32, left: 0, bottom: 0, right: 0)
+        UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
 

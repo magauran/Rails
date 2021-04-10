@@ -9,6 +9,12 @@ import UIKit
 import TinyConstraints
 
 final class TicketView: UIView {
+    var needsHideTimePeriod: Bool = false {
+        didSet {
+            self.timePeriodView.isHidden = self.needsHideTimePeriod
+        }
+    }
+
     init() {
         self.carLabel = Self.makeCarLabel()
         self.seatLabel = Self.makeSeatLabel()
