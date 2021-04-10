@@ -19,6 +19,10 @@ enum Palette {
     static let grayishBlackColor = UIColor(rgb: 0x383838)
     static let greyBackgroundColor = UIColor(rgb:0xF5F5F5)
 
+    enum NavigationBar {
+        static let tint = UIColor(rgb: 0x483434)
+    }
+
     enum Text {
         static let primary = UIColor(rgb: 0x454C66)
         static let placeholder = UIColor(rgb: 0xB5B7C2)

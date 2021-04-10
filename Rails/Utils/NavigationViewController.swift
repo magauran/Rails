@@ -11,38 +11,32 @@ final class NavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateColor()
         
         self.navigationBar.isTranslucent = false
     }
 
-    func background(isWhite:Bool) {
-        if isWhite {
-            self.navigationBar.barTintColor = Palette.viewBGColor
-            self.navigationBar.backgroundColor = Palette.viewBGColor
-        } else {
-            self.navigationBar.barTintColor = Palette.greyBackgroundColor
-            self.navigationBar.backgroundColor = Palette.greyBackgroundColor
-        }
+    static func setupAppearance() {
+        let backImage = UIImage(named: "arrow-icon")
+
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+        appearance.backButtonAppearance.normal.titleTextAttributes = [
+            .foregroundColor: UIColor.clear
+        ]
+        appearance.titleTextAttributes = [NSAttributedString.Key.font :
+                                            Font.semiBold(20),
+                                          NSAttributedString.Key.foregroundColor : Palette.Text.primary]
+        appearance.shadowImage = UIImage()
+        appearance.backgroundColor = Palette.viewBGColor
+        appearance.shadowColor = nil
+
+        UINavigationBar.appearance().tintColor = Palette.NavigationBar.tint
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
     }
-    
-    @objc
-    private func updateColor() {
-        self.setNeedsStatusBarAppearanceUpdate()
-        
-        self.navigationBar.barTintColor = Palette.viewBGColor
-        self.navigationBar.backgroundColor = Palette.viewBGColor
-        self.navigationBar.tintColor = Palette.grayishBlackColor
-        
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.font :
-                                                    UIFont.systemFont(ofSize: 22,
-                                                                      weight: UIFont.Weight.medium),
-                                                  NSAttributedString.Key.foregroundColor : Palette.Text.primary]
-        
-        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationBar.shadowImage = UIImage()
-    }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
@@ -51,9 +45,4 @@ final class NavigationViewController: UINavigationController {
         self.tabBarController?.tabBar.isHidden = false
         return super.popToRootViewController(animated: animated)
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
 }

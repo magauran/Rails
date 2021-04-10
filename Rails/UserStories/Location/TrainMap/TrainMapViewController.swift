@@ -66,6 +66,8 @@ final class TrainMapViewController: UIViewController {
     }
 
     private func setup() {
+        self.title = "My train"
+
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.register(WagonCell.self)
