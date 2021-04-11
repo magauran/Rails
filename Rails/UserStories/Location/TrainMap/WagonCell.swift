@@ -27,12 +27,34 @@ final class WagonCell: UICollectionViewCell {
         }
     }
 
+    func highlightUserPlace() {
+        guard let userShape = self.view.node.nodeBy(tag: "user") as? Shape else { return }
+        userShape.fill = Macaw.Color(rgb: 0x7E8074)
+        userShape.opacity = 1
+
+        guard let userTextShape = self.view.node.nodeBy(tag: "user_text") as? Shape else { return }
+        userTextShape.fill = Macaw.Color(rgb: 0xFFFFFF)
+        self.dimmingView.isHidden = true
+    }
+
+    func unhighlightUserPlace() {
+        guard let userShape = self.view.node.nodeBy(tag: "user") as? Shape else { return }
+        userShape.fill = Macaw.Color(rgb: 0xBDBDC2)
+        userShape.opacity = 0.2
+
+        guard let userTextShape = self.view.node.nodeBy(tag: "user_text") as? Shape else { return }
+        userTextShape.fill = Macaw.Color(rgb: 0x454C66)
+        self.dimmingView.isHidden = false
+    }
+
     private let view: WagonView
     private let userLocationView: UserLocationView
+    private let dimmingView: UIView
 
     override init(frame: CGRect) {
         self.view = WagonView()
         self.userLocationView = UserLocationView()
+        self.dimmingView = UIView()
 
         super.init(frame: frame)
 
@@ -48,6 +70,7 @@ final class WagonCell: UICollectionViewCell {
         self.contentView.addSubview(self.view)
         self.view.edgesToSuperview(insets: .horizontal(50))
         self.contentView.addSubview(self.userLocationView)
+        self.contentView.addSubview(self.dimmingView)
 
         self.userLocationView.isHidden = true
 
@@ -70,5 +93,20 @@ final class WagonCell: UICollectionViewCell {
                 print("tap")
             }
         }
+
+        self.dimmingView.edgesToSuperview()
+        self.dimmingView.backgroundColor = UIColor(rgb: 0x7E8074, alpha: 0.1)
+        self.dimmingView.isHidden = true
+
+        let wagonTitle = UILabel()
+        wagonTitle.styledText = "02"
+        wagonTitle.style = StringStyle {
+            $0.font = Font.bold(96)
+            $0.color = UIColor(rgb: 0x483434, alpha: 0.2)
+        }
+
+        self.dimmingView.addSubview(wagonTitle)
+        wagonTitle.centerXToSuperview()
+        wagonTitle.top(to: self.dimmingView, offset: 96)
     }
 }

@@ -43,6 +43,7 @@ final class TrainMapViewController: UIViewController {
 
     init() {
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        collectionViewFlowLayout.minimumLineSpacing = 0
         self.collectionViewFlowLayout = collectionViewFlowLayout
         self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
         super.init(nibName: nil, bundle: nil)
@@ -107,8 +108,10 @@ extension TrainMapViewController: UICollectionViewDataSource {
                 // For test
                 if indexPath.item == 1 {
                     cell.userLocation = CGPoint(x: 190, y: 250)
+                    cell.highlightUserPlace()
                 } else {
                     cell.userLocation = nil
+                    cell.unhighlightUserPlace()
                 }
 
                 return cell
