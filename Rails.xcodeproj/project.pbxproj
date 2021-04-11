@@ -138,7 +138,7 @@
 		8877306926210523001B5E25 /* ChidoriMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChidoriMenu.swift; sourceTree = "<group>"; };
 		8877306B2621053C001B5E25 /* ChidoriMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChidoriMenuTableViewCell.swift; sourceTree = "<group>"; };
 		8877306D26210555001B5E25 /* ChidoriPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChidoriPresentationController.swift; sourceTree = "<group>"; };
-		888A0F5B26207BA900F16A48 /* Rails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rails.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		888A0F5B26207BA900F16A48 /* AnotherRailcar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnotherRailcar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888A0F5E26207BA900F16A48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888A0F6026207BA900F16A48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		888A0F6726207BAB00F16A48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -384,7 +384,7 @@
 		888A0F5C26207BA900F16A48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				888A0F5B26207BA900F16A48 /* Rails.app */,
+				888A0F5B26207BA900F16A48 /* AnotherRailcar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 			);
 			name = Rails;
 			productName = Rails;
-			productReference = 888A0F5B26207BA900F16A48 /* Rails.app */;
+			productReference = 888A0F5B26207BA900F16A48 /* AnotherRailcar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -803,7 +803,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salangin.Rails;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AnotherRailcar;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -823,7 +823,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.salangin.Rails;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AnotherRailcar;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
