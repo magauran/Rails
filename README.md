@@ -18,7 +18,7 @@ P.S. This is a prototype application developed at [The Big Hack - Digital Editio
 <img src = ".github/scrn5.png" width="32%" />&nbsp;<img src = ".github/scrn4.png" width="32%" />&nbsp;<img src = ".github/scrn6.png" width="32%" />
 
 ## Team
-- Anna Antonova
+- [Anna Antonova](https://www.facebook.com/oneanya111/)
 - [Alexey Salangin](https://github.com/magauran)
 - Gabriele Iorio
 - [Azizbek Asadov](https://github.com/azizbekasadov)
